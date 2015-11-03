@@ -1,2 +1,5 @@
 
 Add path to template file in class-eventbrite-templates.php line 166
+
+Changed 'display_private' => true, from false to true to make events show up
+  eventbrite-index.php line 19
