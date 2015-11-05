@@ -16,7 +16,7 @@ get_header(); ?>
 			<?php
 				// Set up and call our Eventbrite query.
 				$events = new Eventbrite_Query( apply_filters( 'eventbrite_query_args', array(
-					 'display_private' => true // boolean
+					 'display_private' => true, // boolean
 					// 'nopaging' => false,        // boolean
 					// 'limit' => null,            // integer
 					// 'organizer_id' => null,     // integer
@@ -29,12 +29,12 @@ get_header(); ?>
 				) ) );
 
 				if ( $events->have_posts() ) :
-					while ( $events->have_posts() ) : $events->the_post(); ?>
+					while ( $events->have_posts() ) : $events->the_post();
 
-					<?php echo eventbrite_group_post($events);?>
+					 echo eventbrite_group_post($events);
 
 
-					<?php endwhile;
+				  endwhile;
 
 					// Previous/next post navigation.
 					eventbrite_paging_nav( $events );
