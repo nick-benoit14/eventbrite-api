@@ -32,7 +32,25 @@ get_header(); ?>
 				if ( $events->have_posts() ) :
 					while ( $events->have_posts() ) : $events->the_post(); ?>
 
-					<?php echo eventbrite_group_post($events); ?>
+
+					<div class='group container innerblock' id='event- <?php get_the_ID() ?>  "'>
+						<div class='group large " <?php $events->eventbrite_get_post_style()?> "'>
+				                <div class ='group photocontainer'>
+				                            <?php get_the_post_thumbnail(); ?>
+												</div>
+				                           <div class='group details'>
+				                                <div class ='group detailtext'>
+
+				                                   <p class = 'group detailtext'>
+				                                      <?php //$post_string .= eventbrite_event_day(); ?>
+				                                       <br>
+				                                       <?php //$post_string .=  eventbrite_event_time() .  "</p>"; ?>
+
+
+				                			 	 <div class='group title'>
+				                  	    	<div class='group titletext'>
+				                         		<?php get_the_title(); ?>
+				    </div></div></div></div></div>
 
 
 					<?php endwhile;

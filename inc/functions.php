@@ -477,10 +477,10 @@ function eventbrite_group_post($current){
 	$post_string = "";
 
 
-	$post_string .=   "<div class='group container innerblock' id='event-" . get_the_ID() .  "'>";
+	$post_string .=   "<div class='group container innerblock' id='event-" . the_ID() .  "'>";
 		$post_string .=  "<div class='group large " . $current->eventbrite_get_post_style() . "'>";
                 $post_string .=  "<div class ='group photocontainer'>";
-                           $post_string .=  get_the_post_thumbnail() . "</div>";
+                           $post_string .=  the_post_thumbnail() . "</div>";
                            $post_string .= "<div class='group details'>";
                                 $post_string .= "<div class ='group detailtext'>";
 
@@ -490,10 +490,10 @@ function eventbrite_group_post($current){
                                        $post_string .=  eventbrite_event_time() .  "</p>";
 
 
-                                   		 $post_string .= "<a href='" . get_the_permalink() . "'> Details</a> - <a href='" . eventbrite_event_venue()->name . "</a> <a href='" . eventbrite_event_eb_url() . "'>" . eventbrite_event_venue()->name . "</a> -<a href='" .  eventbrite_event_eb_url() . "'> Sign Up</a></div>";
+                                   		 $post_string .= "<a href='" . the_permalink() . "'> Details</a> - <a href='" . eventbrite_event_venue()->name . "</a> <a href='" . eventbrite_event_eb_url() . "'>" . eventbrite_event_venue()->name . "</a> -<a href='" .  eventbrite_event_eb_url() . "'> Sign Up</a></div>";
                 			 	$post_string .= " <div class='group title'>";
                   	    	 $post_string .= "<div class='group titletext'>";
-                         $post_string .=  get_the_title();
+                         $post_string .=  the_title();
     $post_string .= "</div></div></div></div></div>";
 
 
