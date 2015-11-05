@@ -32,6 +32,7 @@ get_header(); ?>
 				if ( $events->have_posts() ) :
 					while ( $events->have_posts() ) : $events->the_post(); ?>
 
+					<?php
 					$post_string .=   "<div class='group container innerblock' id='event-" . get_the_ID() .  "'>";
 						$post_string .=  "<div class='group large " . $current->eventbrite_get_post_style() . "'>";
 				                $post_string .=  "<div class ='group photocontainer'>";
@@ -51,6 +52,7 @@ get_header(); ?>
 				    $post_string .= "</div></div></div></div></div>";
 						echo $post_string;
 
+?>
 					<?php endwhile;
 
 					// Previous/next post navigation.
