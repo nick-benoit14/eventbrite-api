@@ -474,7 +474,6 @@ if ( ! function_exists( 'eventbrite_group_post' ) ) :
 
 function eventbrite_group_post($current){
 
-
 	$post_string = "";
 
 
