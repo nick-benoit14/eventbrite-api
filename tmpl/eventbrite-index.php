@@ -32,27 +32,27 @@ get_header(); ?>
 				if ( $events->have_posts() ) :
 					while ( $events->have_posts() ) : $events->the_post(); ?>
 
-					<?php
-					$post_string .=   "<div class='group container innerblock' id='event-" . get_the_ID() .  "'>";
-						$post_string .=  "<div class='group large " . $current->eventbrite_get_post_style() . "'>";
-				                $post_string .=  "<div class ='group photocontainer'>";
-				                           $post_string .=  get_the_post_thumbnail() . "</div>";
-				                           $post_string .= "<div class='group details'>";
-				                                $post_string .= "<div class ='group detailtext'>";
 
-				                                   $post_string .= "<p class = 'group detailtext'>";
-				                                       $post_string .= eventbrite_event_day();
-				                                       $post_string .= "<br>";
-				                                       $post_string .=  eventbrite_event_time() .  "</p>";
+					<div class='group container innerblock' id='event- <?php get_the_ID() ?>  "'>
+						<div class='group large " <?php $events->eventbrite_get_post_style()?> "'>
+				                <div class ='group photocontainer'>
+				                            <?php get_the_post_thumbnail(); ?>
+												</div>
+				                           <div class='group details'>
+				                                <div class ='group detailtext'>
+
+				                                   <p class = 'group detailtext'>
+				                                      <?php //$post_string .= eventbrite_event_day(); ?>
+				                                       <br>
+				                                       <?php //$post_string .=  eventbrite_event_time() .  "</p>"; ?>
 
 
-				                			 	$post_string .= " <div class='group title'>";
-				                  	    	 $post_string .= "<div class='group titletext'>";
-				                         $post_string .=  get_the_title();
-				    $post_string .= "</div></div></div></div></div>";
-						echo $post_string;
+				                			 	 <div class='group title'>
+				                  	    	<div class='group titletext'>
+				                         		<?php get_the_title(); ?>
+				    </div></div></div></div></div>
 
-?>
+
 					<?php endwhile;
 
 					// Previous/next post navigation.
