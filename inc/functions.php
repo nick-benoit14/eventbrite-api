@@ -482,10 +482,6 @@ function eventbrite_group_post($current){
 		$post_string .=  "<div class='group large " . $current->eventbrite_get_post_style() . "'>";
                 $post_string .=  "<div class ='group photocontainer'>";
                            $post_string .=  get_the_post_thumbnail() . "</div>";
-
-
-
-
                            $post_string .= "<div class='group details'>";
                                 $post_string .= "<div class ='group detailtext'>";
 
