@@ -32,25 +32,24 @@ get_header(); ?>
 				if ( $events->have_posts() ) :
 					while ( $events->have_posts() ) : $events->the_post(); ?>
 
-						<article id="event-<?php the_ID(); ?>" <?php post_class(); ?>>
-							<header class="entry-header">
-								<?php the_post_thumbnail(); ?>
+					$post_string .=   "<div class='group container innerblock' id='event-" . get_the_ID() .  "'>";
+						$post_string .=  "<div class='group large " . $current->eventbrite_get_post_style() . "'>";
+				                $post_string .=  "<div class ='group photocontainer'>";
+				                           $post_string .=  get_the_post_thumbnail() . "</div>";
+				                           $post_string .= "<div class='group details'>";
+				                                $post_string .= "<div class ='group detailtext'>";
 
-								<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+				                                   $post_string .= "<p class = 'group detailtext'>";
+				                                       $post_string .= eventbrite_event_day();
+				                                       $post_string .= "<br>";
+				                                       $post_string .=  eventbrite_event_time() .  "</p>";
 
-								<div class="entry-meta">
-									<?php eventbrite_event_meta(); ?>
-								</div><!-- .entry-meta -->
-							</header><!-- .entry-header -->
 
-							<div class="entry-content">
-								<?php eventbrite_ticket_form_widget(); ?>
-							</div><!-- .entry-content -->
-
-							<footer class="entry-footer">
-								<?php eventbrite_edit_post_link( __( 'Edit', 'eventbrite_api' ), '<span class="edit-link">', '</span>' ); ?>
-							</footer><!-- .entry-footer -->
-						</article><!-- #post-## -->
+				                			 	$post_string .= " <div class='group title'>";
+				                  	    	 $post_string .= "<div class='group titletext'>";
+				                         $post_string .=  get_the_title();
+				    $post_string .= "</div></div></div></div></div>";
+						echo $post_string;
 
 					<?php endwhile;
 
