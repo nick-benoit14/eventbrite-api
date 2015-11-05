@@ -31,25 +31,8 @@ get_header(); ?>
 				if ( $events->have_posts() ) :
 					while ( $events->have_posts() ) : $events->the_post(); ?>
 
-						<article id="event-<?php the_ID(); ?>" <?php post_class(); ?>>
-							<header class="entry-header">
-								<?php the_post_thumbnail(); ?>
+					<?php echo eventbrite_group_post($events);?>
 
-								<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
-
-								<div class="entry-meta">
-									<?php eventbrite_event_meta(); ?>
-								</div><!-- .entry-meta -->
-							</header><!-- .entry-header -->
-
-							<div class="entry-content">
-								<?php eventbrite_ticket_form_widget(); ?>
-							</div><!-- .entry-content -->
-
-							<footer class="entry-footer">
-								<?php eventbrite_edit_post_link( __( 'Edit', 'eventbrite_api' ), '<span class="edit-link">', '</span>' ); ?>
-							</footer><!-- .entry-footer -->
-						</article><!-- #post-## -->
 
 					<?php endwhile;
 
