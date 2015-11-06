@@ -485,9 +485,9 @@ $post_string .=  "<div class ='group photocontainer'>";
                                 $post_string .= "<div class ='group detailtext'>";
 
                                    $post_string .= "<p class = 'group detailtext'>";
-                                       $post_string .= eventbrite_event_day();
+                                       //$post_string .= eventbrite_event_day();
                                        $post_string .= "<br>" . "</p>";
-                                       //$post_string .=  eventbrite_event_time() .  "</p>";
+                                       $post_string .=  eventbrite_event_time() .  "</p>";
 
 
                                    		 $post_string .= "<a href='" . get_the_permalink() . "'> Details</a> - <a href='" . eventbrite_event_venue()->name . "</a> <a href='" . eventbrite_event_eb_url() . "'>" . eventbrite_event_venue()->name . "</a> -<a href='" .  eventbrite_event_eb_url() . "'> Sign Up</a></div>";
