@@ -63,6 +63,7 @@ jQuery(document).ready(function()
 </script>
 
 <style>
+.red{background-color:#ff3722; color:white; font-size:30px}
 .cachemakers-block{height:125px; width:250px;display:inline-block; position:relative;font-family:sans-serif;}
 </style>
 
@@ -101,7 +102,7 @@ get_header(); ?>
 				if ( $events->have_posts() ) :
 					while ( $events->have_posts() ) : $events->the_post(); ?>
 
-						<div class="cachemakers-block">
+						<div class="cachemakers-block red">
 							<div class="cachemakers-block-photo">
 								<?php echo get_the_post_thumbnail(); ?>
 							</div>
