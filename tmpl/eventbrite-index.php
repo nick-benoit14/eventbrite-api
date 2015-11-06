@@ -63,7 +63,7 @@ jQuery(document).ready(function()
 </script>
 
 <style>
-.cachemakers-block{display:inline-block;}
+.cachemakers-block{height:125px; width:250px;display:inline-block; position:relative;font-family:sans-serif;}
 </style>
 
 <?php
