@@ -1,11 +1,3 @@
-<?php
-/**
- * Template Name: Eventbrite Events
- */
-
-
-get_header(); ?>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 
@@ -74,6 +66,14 @@ jQuery(document).ready(function()
 			 });
 </script>
 
+
+<?php
+/**
+ * Template Name: Eventbrite Events
+ */
+
+
+get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 			<header class="page-header">
