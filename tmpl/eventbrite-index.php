@@ -66,7 +66,7 @@ jQuery(document).ready(function()
 .red{background-color:#ff3722; color:white; font-size:18px}
 .cachemakers-block{height:auto; width:250px;display:inline-block;
 	position:relative;font-family:sans-serif; text-align:center;}
-#primary{width:75%;}
+#primary{width:50%;}
 </style>
 
 <?php
