@@ -64,7 +64,7 @@ jQuery(document).ready(function()
 
 <style>
 .red{background-color:#ff3722; color:white; font-size:30px}
-.cachemakers-block{height:125px; width:250px;display:inline-block; position:relative;font-family:sans-serif;}
+.cachemakers-block{height:auto; width:250px;display:inline-block; position:relative;font-family:sans-serif;}
 </style>
 
 <?php
