@@ -66,7 +66,7 @@ jQuery(document).ready(function()
 .red{background-color:#ff3722; color:white; font-size:18px}
 .cachemakers-block{height:auto; width:250px;display:inline-block;
 	position:relative;font-family:sans-serif; text-align:center;}
-#primary{width:50%;}
+#primary{width:75%;}
 </style>
 
 <?php
@@ -76,6 +76,8 @@ jQuery(document).ready(function()
 
 
 get_header(); ?>
+<?php get_sidebar(); ?>
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 			<header class="page-header">
@@ -134,5 +136,4 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
