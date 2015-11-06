@@ -509,6 +509,13 @@ class Eventbrite_Query extends WP_Query {
 
 		return $name;
 	}
+	public function get_post_num()
+		{
+			$num = $this->post_num;
+		 	++$this->post_num;
+			return $num;
+		}
+	
 
 	public function eventbrite_get_post_style()
 	{
