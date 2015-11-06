@@ -13,15 +13,14 @@
 
 
 get_header(); ?>
+
+<?php get_sidebar(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 			<header class="page-header">
-				<h1 class="page-title">
-					<?php// the_title(); ?>
-				</h1>
 			</header><!-- .page-header -->
 
-			<h2> Current Group </h2>
+			<h1> Current Groups </h1>
 			<?php
 				// Set up and call our Eventbrite query.
 				$events = new Eventbrite_Query( apply_filters( 'eventbrite_query_args', array(
@@ -70,5 +69,4 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-	<?php get_sidebar(); ?>
 	<?php get_footer(); ?>
