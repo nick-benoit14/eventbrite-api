@@ -84,7 +84,7 @@ get_header(); ?>
 				</h1>
 			</header><!-- .page-header -->
 
-
+			<h2> Current Group </h2>
 			<?php
 				// Set up and call our Eventbrite query.
 				$events = new Eventbrite_Query( apply_filters( 'eventbrite_query_args', array(
@@ -132,7 +132,8 @@ get_header(); ?>
 			?>
 
 		</main><!-- #main -->
+		<?php get_sidebar(); ?>
+
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
