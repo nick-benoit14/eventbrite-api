@@ -63,8 +63,9 @@ jQuery(document).ready(function()
 </script>
 
 <style>
-.red{background-color:#ff3722; color:white; font-size:30px}
-.cachemakers-block{height:auto; width:250px;display:inline-block; position:relative;font-family:sans-serif;}
+.red{background-color:#ff3722; color:white; font-size:18px}
+.cachemakers-block{height:auto; width:250px;display:inline-block;
+	position:relative;font-family:sans-serif; text-align:center;}
 </style>
 
 <?php
@@ -86,7 +87,7 @@ get_header(); ?>
 				// Set up and call our Eventbrite query.
 				$events = new Eventbrite_Query( apply_filters( 'eventbrite_query_args', array(
 					 'display_private' => true, // boolean
-					// 'nopaging' => false,        // boolean
+					 'nopaging' => true,        // boolean
 					// 'limit' => null,            // integer
 					// 'organizer_id' => null,     // integer
 					// 'p' => null,                // integer
