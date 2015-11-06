@@ -11,18 +11,14 @@ jQuery(document).ready(function()
 										function()
 												{
 														$("div.details", this).animate({"bottom":'-' + $("div.details",this).height() + 'px'}, 200);
-
 														$(".group.photocontainer", this).addClass("selected-photocontainer");
 														$(".group.details", this).addClass("selected-details");
-
-
 												});
 
 						$(".group",this).mouseleave(
 										function()
 												{
 													 $("div.details", this).animate({"bottom":'-' + $("div.title",this).height() + 'px'}, 200);
-
 														$(".group.photocontainer", this).removeClass("selected-photocontainer");
 														$(".group.details", this).removeClass("selected-details");
 
@@ -66,6 +62,9 @@ jQuery(document).ready(function()
 			 });
 </script>
 
+<style>
+.cachemakers-block{display:inline-block;}
+</style>
 
 <?php
 /**
@@ -98,10 +97,19 @@ get_header(); ?>
 				) ) );
 
 
+
 				if ( $events->have_posts() ) :
 					while ( $events->have_posts() ) : $events->the_post(); ?>
 
-					<?php echo eventbrite_group_post($events); ?>
+						<div class="cachemakers-block">
+							<div class="cachemakers-block-photo">
+								<?php echo get_the_post_thumbnail(); ?>
+							</div>
+							<div class="cachemakers-block-details">
+								<?php echo  get_the_title();?>
+							</div>
+						</div>
+
 
 
 					<?php endwhile;
