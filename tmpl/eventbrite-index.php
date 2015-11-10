@@ -1,10 +1,79 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+<script>
+jQuery(document).ready(function()
+		{
+
+			 /* OnMouseOver Animation  */
+
+						$(".group",this).mouseenter(
+										function()
+												{
+														$("div.details", this).animate({"bottom":'-' + $("div.details",this).height() + 'px'}, 200);
+
+														$(".group.photocontainer", this).addClass("selected-photocontainer");
+														$(".group.details", this).addClass("selected-details");
+
+
+												});
+
+						$(".group",this).mouseleave(
+										function()
+												{
+													 $("div.details", this).animate({"bottom":'-' + $("div.title",this).height() + 'px'}, 200);
+
+														$(".group.photocontainer", this).removeClass("selected-photocontainer");
+														$(".group.details", this).removeClass("selected-details");
+
+												});
+
+		$(window).resize(function()
+							 {
+									 if($(window).width() < 1100)
+											 {
+
+												 //minimize slider
+													 $('.cachemakers.cache-slider-container-full').removeClass('cache-slider-container-full')
+													 .addClass('cache-slider-container-min');
+
+														$('.cachemakers.cache-announcement-text-full').removeClass('cachemakers cache-announcement-text-full')
+													 .addClass('cachemakers cache-announcement-text-min');
+
+												 //Minimize blockwrapper  <div class="blockwrapper-min">
+													 $('.blockwrapper').removeClass('blockwrapper').addClass('blockwrapper-min');
+
+												 //minimize sidebar <div class="cacheonium cache-sidebar-min grey">
+													 $('.cacheonium.cache-sidebar-full').removeClass('cache-sidebar-full').addClass('cache-sidebar-min');
+
+
+											 }
+									 else
+											{
+													 $('.cachemakers.cache-slider-container-min').removeClass('cache-slider-container-min') //maximize slider
+													 .addClass('cache-slider-container-full');
+
+														$('.cachemakers.cache-announcement-text-min').removeClass('cachemakers cache-announcement-text-min')
+													 .addClass('cachemakers cache-announcement-text-full');
+
+												//Minimize blockwrapper  <div class="blockwrapper-min">
+													 $('.blockwrapper-min').removeClass('blockwrapper-min').addClass('blockwrapper');
+
+												 //minimize sidebar <div class="cacheonium cache-sidebar-min grey">
+													 $('.cacheonium.cache-sidebar-min').removeClass('cache-sidebar-min').addClass('cache-sidebar-full');
+											}
+							 });
+			 });
+</script>
+
+
 <?php
 /**
  * Template Name: Eventbrite Events
  */
 
-get_header(); ?>
 
+get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 			<header class="page-header">
@@ -16,7 +85,7 @@ get_header(); ?>
 			<?php
 				// Set up and call our Eventbrite query.
 				$events = new Eventbrite_Query( apply_filters( 'eventbrite_query_args', array(
-					// 'display_private' => false, // boolean
+					 'display_private' => true, // boolean
 					// 'nopaging' => false,        // boolean
 					// 'limit' => null,            // integer
 					// 'organizer_id' => null,     // integer
@@ -28,28 +97,12 @@ get_header(); ?>
 					// 'format_id' => null,        // integer
 				) ) );
 
+
 				if ( $events->have_posts() ) :
 					while ( $events->have_posts() ) : $events->the_post(); ?>
 
-						<article id="event-<?php the_ID(); ?>" <?php post_class(); ?>>
-							<header class="entry-header">
-								<?php the_post_thumbnail(); ?>
+					<?php echo eventbrite_group_post($events); ?>
 
-								<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
-
-								<div class="entry-meta">
-									<?php eventbrite_event_meta(); ?>
-								</div><!-- .entry-meta -->
-							</header><!-- .entry-header -->
-
-							<div class="entry-content">
-								<?php eventbrite_ticket_form_widget(); ?>
-							</div><!-- .entry-content -->
-
-							<footer class="entry-footer">
-								<?php eventbrite_edit_post_link( __( 'Edit', 'eventbrite_api' ), '<span class="edit-link">', '</span>' ); ?>
-							</footer><!-- .entry-footer -->
-						</article><!-- #post-## -->
 
 					<?php endwhile;
 
