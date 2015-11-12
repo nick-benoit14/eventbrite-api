@@ -478,7 +478,7 @@ function eventbrite_group_post($current){
 
 
 	$post_string .=   "<div class='group container innerblock' id='event-" . get_the_ID() .  "'>";
-		$post_string .=  "<div class='group large bright-blue'>";// . $current->eventbrite_get_post_style() . "'>";
+	$post_string .=  "<div class='group large bright-blue'>";// . $current->eventbrite_get_post_style() . "'>";
 $post_string .=  "<div class ='group photocontainer'>";
                            $post_string .=  get_the_post_thumbnail() . "</div>";
                            $post_string .= "<div class='group details'>";
@@ -495,6 +495,7 @@ $post_string .=  "<div class ='group photocontainer'>";
                   	    	 $post_string .= "<div class='group titletext'>";
                          $post_string .=  get_the_title();
     $post_string .= "</div></div></div></div></div>";
+
 
 
 
