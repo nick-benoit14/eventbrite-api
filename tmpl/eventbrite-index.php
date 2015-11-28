@@ -15,14 +15,17 @@
 get_header(); ?>
 	<div id="primary" <?php generate_content_class();?>>
 		<main id="main" class="site-main" role="main">
-			<header class="page-header">
-			</header><!-- .page-header -->
+			
+		        
+                        <div  style="padding:30px" class="slider">
+  			  <div><img width="800" height="400" src="http://45.55.18.170/wp-content/uploads/2015/11/solder.jpg"></div>
+			</div>
 
 			<h1> Current Groups </h1>
 			<?php
 				// Set up and call our Eventbrite query.
 				$events = new Eventbrite_Query( apply_filters( 'eventbrite_query_args', array(
-					 'display_private' => true, // boolean
+					 'display_private' => false, // boolean
 					 'nopaging' => true,        // boolean
 					// 'limit' => null,            // integer
 					// 'organizer_id' => null,     // integer
