@@ -15,8 +15,8 @@
 get_header(); ?>
 	<div id="primary" <?php generate_content_class();?>>
 		<main id="main" class="site-main" role="main">
-			
-		        
+
+
                         <div  style="padding:30px" class="slider">
   			  <div><img width="800" height="400" src="http://45.55.18.170/wp-content/uploads/2015/11/solder.jpg"></div>
 			</div>
@@ -67,6 +67,13 @@ get_header(); ?>
 				// Return $post to its rightful owner.
 				wp_reset_postdata();
 			?>
+
+			<h1>Location</h1>
+			<p>Cache Makerspace
+				990 S Main Suite A
+				Logan, UT</p>
+			<p>North of the Providence Maceys, east of the South Walmart, west of the Mattress Outlet, 
+				and directly south of (the former) Don Aslett.  Right by the bus stop.</p>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
