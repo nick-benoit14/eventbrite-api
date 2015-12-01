@@ -70,13 +70,27 @@ get_header(); ?>
 
 			<h1>Location</h1>
 			<div>
-			  <p>Cache Makerspace
-				990 S Main Suite A
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1489.1541753032047!2d-111.83529
+				941880711!3d41.71386464291981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87547e380e50b5e9%
+				3A0xd48d3e368581ac3a!2s990+S+Main+St%2C+Logan%2C+UT+84321!5e0!3m2!1sen!2sus!4v1449011906529" width="400"
+				height="300" frameborder="0" style="border:0; display:inline-block" allowfullscreen></iframe>
+
+				<div style="display:inline-block;">
+			  <p>
+				Cache Makerspace </br>
+				990 S Main Suite A</br>
 				Logan, UT
-		          </p>
-			<p>North of the Providence Maceys, east of the South Walmart,
-      			    west of the Mattress Outlet, and directly south of (the former) Don Aslett.
-		            Right by the bus stop.</p>
+		    </p>
+
+			  <p>
+				North of the Providence Maceys, east of the South Walmart,
+	    	 west of the Mattress Outlet, and directly south of (the former) Don Aslett.
+		     Right by the bus stop.
+			  </p>
+
+			</div>
+
+
 			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
