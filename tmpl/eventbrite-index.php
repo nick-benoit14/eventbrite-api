@@ -42,14 +42,16 @@ get_header(); ?>
 				if ( $events->have_posts() ) :
 					while ( $events->have_posts() ) : $events->the_post(); ?>
 
-						<div class="cachemakers-block red">
-							<div class="cachemakers-block-photo">
-								<?php echo get_the_post_thumbnail(); ?>
-							</div>
+						<a href = <?php get_the_permalink(); ?>>
+							<div class="cachemakers-block red">
+								<div class="cachemakers-block-photo">
+									<?php echo get_the_post_thumbnail(); ?>
+								</div>
 							<div class="cachemakers-block-details">
 								<?php echo  get_the_title();?>
 							</div>
 						</div>
+					</a>
 
 
 
