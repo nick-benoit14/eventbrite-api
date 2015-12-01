@@ -69,12 +69,15 @@ get_header(); ?>
 			?>
 
 			<h1>Location</h1>
-			<p>Cache Makerspace
+			<div>
+			  <p>Cache Makerspace
 				990 S Main Suite A
-				Logan, UT</p>
-			<p>North of the Providence Maceys, east of the South Walmart, west of the Mattress Outlet, 
-				and directly south of (the former) Don Aslett.  Right by the bus stop.</p>
-
+				Logan, UT
+		          </p>
+			<p>North of the Providence Maceys, east of the South Walmart,
+      			    west of the Mattress Outlet, and directly south of (the former) Don Aslett.
+		            Right by the bus stop.</p>
+			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 	<?php get_sidebar(); ?>
