@@ -16,7 +16,7 @@
 	 background-color:#ff3722; color:white; font-size: 18px;
 	 height:auto; width:250px;display:inline-block;
 	position:relative;font-family:sans-serif; text-align:center;
-	 margin:15px;
+	 margin:15px; z-index:1;
 
 	 -webkit-transition:width .5s;
     transition: width: .5s;
@@ -32,7 +32,7 @@
  .cachemakers-block:hover{
 	 background-color:#1DA4B4;
 	 width: 275px;
-	 z-index:10;
+	 z-index:3;
  }
 
 
