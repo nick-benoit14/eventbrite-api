@@ -18,8 +18,8 @@
 	position:relative;font-family:sans-serif; text-align:center;
 	 margin:15px;
 
-	 -webkit-transition:duration:10s
-    transition: duration:10s
+	 -webkit-transition:background-color:10s;
+    transition: background-color:10s;
 
 	 /*animation-name: blockFade;
 	 animation-duration: 2s;
