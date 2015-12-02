@@ -31,7 +31,8 @@
 
  .cachemakers-block:hover{
 	 background-color:#1DA4B4;
-	 width: 275px;
+	 width:260px;
+	 margin:5px;
  }
 
 
