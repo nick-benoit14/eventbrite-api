@@ -18,8 +18,9 @@
 	position:relative;font-family:sans-serif; text-align:center;
 	 margin:15px;
 
-	 -webkit-transition:width .5s;
-    transition: width: .5s;
+	 -webkit-transition:width .5s margin .5s;
+    transition: width: .5s margin .5s;
+
 
 	 /*animation-name: blockFade;
 	 animation-duration: 2s;
