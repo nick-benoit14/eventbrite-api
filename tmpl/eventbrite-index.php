@@ -18,8 +18,8 @@
 	position:relative;font-family:sans-serif; text-align:center;
 	 margin:15px;
 
-	 -webkit-transition:width .5s margin .5s;
-    transition: width: .5s margin .5s;
+	 -webkit-transition:width .5s margin .5s background-color 1s;
+    transition: width: .5s margin .5s background-color 1s;
 
 
 	 /*animation-name: blockFade;
@@ -32,8 +32,6 @@
 
  .cachemakers-block:hover{
 	 background-color:#1DA4B4;
-	 width:260px;
-	 margin:5px;
  }
 
 
