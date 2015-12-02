@@ -31,6 +31,18 @@
 
  .cachemakers-block:hover{
 	 background-color:#1DA4B4;
+	 height:
+ }
+
+ .cachemakers-block-details{
+	 height:auto;
+
+	 -webkit-transition: height 2s;
+   transition: height 2s;
+ }
+
+ .cachemakers-block-details:hover{
+	 height:30px;
  }
 
 
