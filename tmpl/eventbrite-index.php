@@ -18,12 +18,22 @@
 	position:relative;font-family:sans-serif; text-align:center;
 	 margin:15px;
 
-	 animation-name: blockFade;
+	 /*animation-name: blockFade;
 	 animation-duration: 2s;
 
-	 -webkit-animation-name: blockFade; /* Chrome, Safari, Opera */
-	 -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+	 -webkit-animation-name: blockFade;
+	 -webkit-animation-duration: 2s;
+	*/
  }
+
+ .cachemakers-block:hover{
+	 background-color:#1DA4B4; color:white; font-size: 18px;
+	height:auto; width:250px;display:inline-block;
+ position:relative;font-family:sans-serif; text-align:center;
+	margin:15px;
+ }
+
+
 #primary{}
 </style>
 
