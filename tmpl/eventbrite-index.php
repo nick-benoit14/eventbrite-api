@@ -1,8 +1,21 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <style>
-.red{background-color:#ff3722; color:white; font-size:18px}
-.cachemakers-block{height:auto; width:250px;display:inline-block;
-	position:relative;font-family:sans-serif; text-align:center;}
+
+@keyframes blockFade {
+    from {background-color: #ff3722;}
+    to {background-color: #1DA4B4;}
+}
+
+/*.red{ color:white; font-size:18px}*/
+.cachemakers-block{
+	 background-color:#ff3722; color:white; font-size: 18px;
+	 height:auto; width:250px;display:inline-block;
+	position:relative;font-family:sans-serif; text-align:center;
+	 margin:15px;
+
+	 animation-name: blockFade;
+	 animation-duration: 2s;
+ }
 #primary{}
 </style>
 
@@ -68,7 +81,7 @@ get_header(); ?>
 				wp_reset_postdata();
 			?>
 
-			<h1>Location</h1>
+			<h1 style="">Location</h1>
 			<div>
 				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1489.1541753032047!2d-111.83529
 				941880711!3d41.71386464291981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87547e380e50b5e9%
