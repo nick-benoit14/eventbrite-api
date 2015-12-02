@@ -439,7 +439,7 @@ class Eventbrite_Query extends WP_Query {
 				// Add a permalink to events on the listings template.
 				else {
 					$html = sprintf( '<a class="post-thumbnail" href="%1$s"><img src="%2$s" class="wp-post-image"></a>',
-						esc_url( get_the_permalink() ),
+						esc_url( eventbrite_event_eb_url() ),
 						esc_url( $event->logo_url )
 					);
 				}
@@ -515,7 +515,7 @@ class Eventbrite_Query extends WP_Query {
 		 	++$this->post_num;
 			return $num;
 		}
-	
+
 
 	public function eventbrite_get_post_style()
 	{
