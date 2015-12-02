@@ -30,14 +30,7 @@
  }
 
  .cachemakers-block:hover{
-	 background-color:#1DA4B4; color:white; font-size: 18px;
-	height:auto; width:250px;display:inline-block;
- position:relative;font-family:sans-serif; text-align:center;
-	margin:15px;
-
-	webkit-transition:duration:10s
-	 transition: duration:10s
-
+	 background-color:#1DA4B4;
  }
 
 
