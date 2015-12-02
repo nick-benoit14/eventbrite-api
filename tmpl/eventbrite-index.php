@@ -6,6 +6,11 @@
     to {background-color: #1DA4B4;}
 }
 
+@-webkit-keyframes blockFade {
+    from {background-color:  #ff3722;}
+    to {background-color: #1DA4B4;}
+}
+
 /*.red{ color:white; font-size:18px}*/
 .cachemakers-block{
 	 background-color:#ff3722; color:white; font-size: 18px;
@@ -15,6 +20,9 @@
 
 	 animation-name: blockFade;
 	 animation-duration: 2s;
+
+	 -webkit-animation-name: blockFade; /* Chrome, Safari, Opera */
+	 -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
  }
 #primary{}
 </style>
