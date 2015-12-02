@@ -17,9 +17,9 @@
 	 height:auto; width:250px;display:inline-block;
 	position:relative;font-family:sans-serif; text-align:center;
 	 margin:15px;
-	 
-	 -webkit-transition:duration:1s
-    transition: duration:1s
+
+	 -webkit-transition:duration:10s
+    transition: duration:10s
 
 	 /*animation-name: blockFade;
 	 animation-duration: 2s;
@@ -35,8 +35,8 @@
  position:relative;font-family:sans-serif; text-align:center;
 	margin:15px;
 
-	webkit-transition:duration:1s
-	 transition: duration:1s
+	webkit-transition:duration:10s
+	 transition: duration:10s
 
  }
 
