@@ -60,10 +60,10 @@
       font-size: 100%; }
     .cachemakers-image-box .cachemakers-signup-box button {
       position: absolute;
-      right: 0%;
+      left: 0%;
       margin: 5%;
       padding: 1%;
-      font-size: 100%;
+      font-size: 140%;
       background-color: #848383;
       color: #efefef; }
       .cachemakers-image-box .cachemakers-signup-box button:hover {

@@ -42,18 +42,15 @@ get_header(); ?>
           <div class="cachemakers-container">
 	          <div class="cachemakers-image-box">
 		          <div class="cachemakers-signup-box">
-		            <h4>Leader: Joel Duffin</h4>
+		            <!-- <h4>Leader: Joel Duffin</h4> -->
 		            <button>Sign Up</button>
 		          </div>
-		          <!--<p>Short description of the details of this group. This group. gonna be a good group... <a href="">more information</a></p> -->
 							<p><?php echo eventbrite_get_description(); ?></p>
 		          <?php the_post_thumbnail(); ?>
 	          </div>
 	          <div class ="cachemakers-info">
 		          <h2><?php the_title(); ?></h2>
-		        <!--  <p class="dateTime">Tuesday &middot; 5:30 - 6:30 PM <br> August 12 - September 30 <br> Cache Makerspace </p>-->
 								<p class="dateTime"> <?php echo  eventbrite_format_time(); ?> </p>
-						<!--  <div class="tags">&middot; Mechanical &middot; Design </div> -->
 	          </div>
           </div>
 
