@@ -37,7 +37,7 @@ get_header(); ?>
 				if ( $events->have_posts() ) :
 					while ( $events->have_posts() ) : $events->the_post(); ?>
 
-							echo eventbrite_get_Eventblock();
+							<?php echo eventbrite_get_Eventblock(); ?>
 
 
 
