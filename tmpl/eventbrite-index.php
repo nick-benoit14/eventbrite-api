@@ -39,9 +39,9 @@ get_header(); ?>
 				if ( $events->have_posts() ) :
 					while ( $events->have_posts() ) : $events->the_post(); ?>
 
-          <div class="container">
-          <div class="image-box">
-          <div class="signup-box">
+          <div class="cachemakers-container">
+          <div class="cachemakers-image-box">
+          <div class="cachemakers-signup-box">
             <h4>Leader: Joel Duffin</h4>
             <button>Sign Up</button>
           </div>
@@ -49,7 +49,7 @@ get_header(); ?>
           </p>
           <img src="wp-includes/images/Makers/sample.jpg" />
           </div>
-          <div class ="info">
+          <div class ="cachemakers-info">
           <h2>Super Super Long Title: All of the Title that could be</h2>
           <p class="dateTime">Tuesday &middot; 5:30 - 6:30 PM <br> August 12 - September 30 <br> Cache Makerspace </p>
           <div class="tags">&middot; Mechanical &middot; Design </div>
