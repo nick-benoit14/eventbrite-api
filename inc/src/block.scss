@@ -1,0 +1,101 @@
+
+$primary-color: #DDDDDD;
+$font-color:#222222;
+
+$secondary-color: #848383;
+$secondary-font-color:#efefef;
+
+$active-color:#ffffff;
+$active-text:#000000;
+
+$block-height:340px;
+$block-width:300px;
+
+@mixin photo-fade($duration){
+  -webkit-transition: visibility 0s $duration, opacity $duration;
+     -moz-transition: visibility 0s $duration, opacity $duration;
+      -ms-transition: visibility 0s $duration, opacity $duration;
+          transition: visibility 0s $duration, opacity $duration;
+}
+
+@mixin photo-unfade($duration){
+  -webkit-transition: visibility 0s 0s, opacity $duration;
+     -moz-transition: visibility 0s 0s, opacity $duration;
+      -ms-transition: visibility 0s 0s, opacity $duration;
+          transition: visibility 0s 0s, opacity $duration;
+}
+
+@mixin button-fade($duration){
+  -webkit-transition: all $duration ease-in-out;
+     -moz-transition: all $duration ease-in-out;
+      -ms-transition: all $duration ease-in-out;
+          transition: all $duration ease-in-out;
+}
+
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Raleway'), url(https://fonts.gstatic.com/s/raleway/v9/0dTEPzkLWceF7z0koJaX1A.woff2) format('woff2');
+}
+
+
+.cachemakers-block{font-family: 'Raleway', sans-serif; font-size:100%; line-height:130%;}
+
+  .container{
+    @extend .cachemakers-block;
+
+    display:inline-block; text-align:center; height:auto;
+    width:$block-width; margin:1%; background-color:$primary-color;
+    position:relative; color:$font-color;
+    box-shadow: 4px 4px 2px gray;
+    .image-box img{visibility:visible; opacity:1;}
+
+    &:hover{
+      .image-box
+              img{
+                @include photo-fade(.2s);
+                opacity:0; visibility:hidden;
+              }
+            }
+    }
+
+  .image-box{
+    @extend .cachemakers-block;
+    height:150px; width:100%; position:relative; overflow:hidden;
+
+    img{
+      @include photo-unfade(.2s);
+      position:absolute; left:0px;
+      top:0px; height:100%; width:100%;
+    }
+
+    p{font-size:80%; padding:10px;}
+
+    .signup-box{
+      width:100%; height:33%; overflow:hidden;
+
+      h4{position:absolute; left:0%; margin:5%; font-size:100%;}
+      button{
+        position:absolute; right:0%; margin:5%; padding:1%;
+        font-size:100%; background-color:$secondary-color;
+        color:$secondary-font-color;
+
+        &:hover{
+          @include button-fade(.2s);
+          background-color:$active-color; color:$active-text;
+        }
+      }
+    }
+  }
+
+
+
+  .info{
+    @extend .cachemakers-block;
+
+      h2{padding:1%; margin:1%; font-size:100%;}
+      .dateTime{font-size:100%}
+      .tags{font-size:70%; text-align:left; margin:10%;}
+  }
