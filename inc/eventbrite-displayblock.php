@@ -59,7 +59,9 @@ if( ! function_exists('eventbrite_format_time') ):
 	esc_html( mysql2date( 'l', $start ) ), //Day of week
 	esc_html( mysql2date( 'g:i A', $start ) ), //Start Time
 	esc_html( mysql2date( 'g:i A', $end ) ), //End Time
-  null, null
+  esc_html( mysql2date( 'F j', $start ) ), //Start Date
+  esc_html( mysql2date( 'F j', $end ) )  //End Date
+
   );
 
     return $event_time;
