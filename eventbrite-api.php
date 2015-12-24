@@ -56,4 +56,4 @@ function eventbrite_api_init() {
 add_action( 'init', 'eventbrite_api_init' );
 
 //Include block styles
-add_action( 'wp_enqueue_scripts', 'eventbrite_load_eventblock_style' );
+//add_action( 'wp_enqueue_scripts', 'eventbrite_load_eventblock_style' );
