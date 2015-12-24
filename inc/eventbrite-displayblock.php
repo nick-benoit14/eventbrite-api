@@ -28,12 +28,21 @@ endif;
 
 
 
-if( ! function_exists('eventbrite_load_eventblock_style') ):
-
+if( ! function_exists('eventbrite_load_eventblock_style') ): //Give styles to wordpress. add action in eventbrite-api.php
   function eventbrite_load_eventblock_style(){
     wp_register_style( 'eventblock', plugins_url( 'eventbrite-api/inc/block.css' ) );
   	wp_enqueue_style( 'eventblock' );
+  }
+endif;
 
+
+
+if( ! function_exists('eventbrite_format_time') ):
+  function eventbrite_format_time(){
+    $end = eventbrite_event_end();
+    $start = eventbrite_event_start();
+
+    return $end . $start;
   }
 endif;
 

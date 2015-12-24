@@ -18,6 +18,9 @@ get_header(); ?>
 			</div>
 
 			<h1> Current Groups </h1>
+			<h1> Test </h1>
+		<?php	echo eventbrite_format_time(); ?>
+
 			<?php
 				// Set up and call our Eventbrite query.
 				$events = new Eventbrite_Query( apply_filters( 'eventbrite_query_args', array(
