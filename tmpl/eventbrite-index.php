@@ -51,7 +51,7 @@ get_header(); ?>
 	          <div class ="cachemakers-info">
 		          <h2><?php the_title(); ?></h2>
 		          <p class="dateTime">Tuesday &middot; 5:30 - 6:30 PM <br> August 12 - September 30 <br> Cache Makerspace </p>
-		          <div class="tags">&middot; Mechanical &middot; Design </div>
+		        <!--  <div class="tags">&middot; Mechanical &middot; Design </div> -->
 	          </div>
           </div>
 
