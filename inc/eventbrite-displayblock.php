@@ -39,21 +39,8 @@ endif;
 
 if( ! function_exists('eventbrite_format_time') ):
   function eventbrite_format_time(){
-    // Determine if the end time needs the date included (in the case of multi-day events).
-/*    $end_time = ( eventbrite_is_multiday_event() )
-      ? mysql2date( 'F j Y, g:i A', eventbrite_event_end()->local )
-      : mysql2date( 'g:i A', eventbrite_event_end()->local );
-*/
-    // Assemble the full event time string.
-/*    $event_time = sprintf(
-      _x( '%1$s - %2$s', 'Event date and time. %1$s = start time, %2$s = end time', 'eventbrite_api' ),
-      esc_html( mysql2date( 'F j Y, g:i A', eventbrite_event_start()->local ) ),
-      esc_html( $end_time )
-    );
-*/
     $start = eventbrite_event_start()->local;
     $end = eventbrite_event_end()->local;
-
     $event_time = sprintf( //Day of week * StartTime - Time * Start Date - End Date
     '%s <br> %s - %s <br> %s - %s',
 	esc_html( mysql2date( 'l', $start ) ), //Day of week
@@ -61,9 +48,7 @@ if( ! function_exists('eventbrite_format_time') ):
 	esc_html( mysql2date( 'g:i A', $end ) ), //End Time
   esc_html( mysql2date( 'F j', $start ) ), //Start Date
   esc_html( mysql2date( 'F j Y', $end ) )  //End Date
-
   );
-
     return $event_time;
   }
 endif;
