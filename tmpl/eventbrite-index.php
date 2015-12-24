@@ -18,7 +18,6 @@ get_header(); ?>
 			</div>
 
 			<h1> Current Groups </h1>
-      <div style="position:relative;">
 			<?php
 				// Set up and call our Eventbrite query.
 				$events = new Eventbrite_Query( apply_filters( 'eventbrite_query_args', array(
@@ -72,7 +71,6 @@ get_header(); ?>
 				// Return $post to its rightful owner.
 				wp_reset_postdata();
 			?>
-    </div>
 
 			<h1 style="">Location</h1>
 			<div>
