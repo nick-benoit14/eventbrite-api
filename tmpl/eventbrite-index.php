@@ -47,7 +47,7 @@ get_header(); ?>
 		          </div>
 		          <!--<p>Short description of the details of this group. This group. gonna be a good group... <a href="">more information</a></p> -->
 							<p><?php echo eventbrite_get_description(); ?></p>
-		          <?php the_post_thumbnail(); ?>>
+		          <?php the_post_thumbnail(); ?>
 	          </div>
 	          <div class ="cachemakers-info">
 		          <h2><?php the_title(); ?></h2>

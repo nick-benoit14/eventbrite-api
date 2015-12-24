@@ -4,7 +4,7 @@
 if ( ! function_exists( 'eventbrite_get_description' ) ):
   function eventbrite_get_description(){
     $content = substr(strip_tags(get_the_content()), 0, 75);
-    $more_info = "....<a href='" . eventbrite_event_eb_url() ."'more info</a>";
+    $more_info = "....<a href='" . eventbrite_event_eb_url() ."'>more info</a>";
     return $content . $more_info;
   }
 endif;
