@@ -46,7 +46,7 @@ $block-width:300px;
   .cachemakers-container{
     @extend .cachemakers-block;
 
-    display:inline-block; text-align:center; height:auto;
+    display:inline-block; text-align:center; height:$block-height;
     width:$block-width; margin:0.5%; background-color:$primary-color;
     position:relative; color:$font-color;
     box-shadow: 4px 4px 2px gray;
@@ -95,7 +95,7 @@ $block-width:300px;
   .cachemakers-info{
     @extend .cachemakers-block;
 
-      h2{padding:1%; margin:1%; font-size:100%;}
+      h2{padding:1%; margin:1%; font-size:110%; font-weight:bold;}
       .dateTime{font-size:100%}
       .tags{font-size:70%; text-align:left; margin:10%;}
   }

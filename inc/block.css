@@ -11,7 +11,7 @@
 .cachemakers-container {
   display: inline-block;
   text-align: center;
-  height: auto;
+  height: 340px;
   width: 300px;
   margin: 0.5%;
   background-color: #DDDDDD;
@@ -76,7 +76,8 @@
 .cachemakers-info h2 {
   padding: 1%;
   margin: 1%;
-  font-size: 100%; }
+  font-size: 110%;
+  font-weight: bold; }
 .cachemakers-info .dateTime {
   font-size: 100%; }
 .cachemakers-info .tags {
