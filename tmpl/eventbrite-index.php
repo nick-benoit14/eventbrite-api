@@ -45,8 +45,8 @@ get_header(); ?>
 		            <h4>Leader: Joel Duffin</h4>
 		            <button>Sign Up</button>
 		          </div>
-		          <p>Short description of the details of this group. This group. gonna be a good group... <a href="">more information</a>
-		          </p>
+		          <!--<p>Short description of the details of this group. This group. gonna be a good group... <a href="">more information</a></p> -->
+							<p><?php eventbrite_get_description(); ?></p>
 		          <?php the_post_thumbnail(); ?>>
 	          </div>
 	          <div class ="cachemakers-info">

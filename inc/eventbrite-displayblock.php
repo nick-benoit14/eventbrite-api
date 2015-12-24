@@ -1,5 +1,14 @@
 <?php
 
+
+if ( ! function_exists( 'eventbrite_get_description' ) ):
+  function eventbrite_get_description(){
+    $content = substr(the_content(), 0, 50);
+    $more_info = "....<a href='" . eventbrite_event_eb_url() ."'>more info</a>";
+    return $content . $more_info;
+  }
+endif;
+
 if ( ! function_exists( 'eventbrite_get_eventblock' ) ):
   function eventbrite_get_Eventblock(){
 
