@@ -1,44 +1,5 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<style>
 
-@keyframes blockFade {
-    from {background-color: #ff3722;}
-    to {background-color: #1DA4B4;}
-}
-
-@-webkit-keyframes blockFade {
-    from {background-color:  #ff3722;}
-    to {background-color: #1DA4B4;}
-}
-
-/*.red{ color:white; font-size:18px}*/
-.cachemakers-block{
-	 background-color:#ff3722; color:white; font-size: 18px;
-	 height:auto; width:250px;display:inline-block;
-	position:relative;font-family:sans-serif; text-align:center;
-	 margin:15px;
-
-	 -webkit-transition:width .5s margin .5s background-color 1s;
-    transition: width: .5s margin .5s background-color 1s;
-
-
-	 /*animation-name: blockFade;
-	 animation-duration: 2s;
-
-	 -webkit-animation-name: blockFade;
-	 -webkit-animation-duration: 2s;
-	*/
- }
-
- .cachemakers-block:hover{
-	 background-color:#1DA4B4;
- }
-
-
-
-
-#primary{}
-</style>
 
 <?php
 /**
@@ -76,14 +37,7 @@ get_header(); ?>
 				if ( $events->have_posts() ) :
 					while ( $events->have_posts() ) : $events->the_post(); ?>
 
-							<div class="cachemakers-block red">
-								<div class="cachemakers-block-photo">
-									<?php echo get_the_post_thumbnail(); ?>
-								</div>
-							<div class="cachemakers-block-details">
-								<?php echo  get_the_title();?>
-							</div>
-						</div>
+							echo eventbrite_get_Eventblock();
 
 
 
