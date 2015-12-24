@@ -43,7 +43,7 @@ get_header(); ?>
 	          <div class="cachemakers-image-box">
 		          <div class="cachemakers-signup-box">
 		            <!-- <h4>Leader: Joel Duffin</h4> -->
-		            <button>Sign Up</button>
+		            <a href='"'<?php echo eventbrite_event_eb_url(); ?>'"'><button>Sign Up</button></a>
 		          </div>
 							<p><?php echo eventbrite_get_description(); ?></p>
 		          <?php the_post_thumbnail(); ?>
