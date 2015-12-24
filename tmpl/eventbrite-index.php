@@ -45,7 +45,7 @@ get_header(); ?>
           </div>
           <p>Short description of the details of this group. This group. gonna be a good group... <a href="">more information</a>
           </p>
-          <img src="wp-includes/images/Makers/sample.jpg=" />
+          <img src="wp-includes/images/Makers/sample.jpg" />
           </div>
           <div class ="info">
           <h2>Super Super Long Title: All of the Title that could be</h2>
