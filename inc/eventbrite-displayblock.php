@@ -39,10 +39,26 @@ endif;
 
 if( ! function_exists('eventbrite_format_time') ):
   function eventbrite_format_time(){
-    $end = eventbrite_event_end();
-    $start = eventbrite_event_start();
+    // Determine if the end time needs the date included (in the case of multi-day events).
+    $end_time = ( eventbrite_is_multiday_event() )
+      ? mysql2date( 'F j Y, g:i A', eventbrite_event_end()->local )
+      : mysql2date( 'g:i A', eventbrite_event_end()->local );
 
-    return $end . $start;
+    // Assemble the full event time string.
+/*    $event_time = sprintf(
+      _x( '%1$s - %2$s', 'Event date and time. %1$s = start time, %2$s = end time', 'eventbrite_api' ),
+      esc_html( mysql2date( 'F j Y, g:i A', eventbrite_event_start()->local ) ),
+      esc_html( $end_time )
+    );
+*/
+    $start = eventbrite_event_start()->local;
+
+    $event_time = sprintf( //Day of week * Time - Time * Start Date - End Date
+    '%s &middot; %s - %s &middot; %s - %s',
+    esc_html( mysql2date( 'w', $start ) )
+  );
+
+    return $event_time;
   }
 endif;
 
