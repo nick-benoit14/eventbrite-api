@@ -37,7 +37,22 @@ get_header(); ?>
 				if ( $events->have_posts() ) :
 					while ( $events->have_posts() ) : $events->the_post(); ?>
 
-							<?php echo eventbrite_get_Eventblock(); ?>
+          <div class="container">
+          <div class="image-box">
+          <div class="signup-box">
+            <h4>Leader: Joel Duffin</h4>
+            <button>Sign Up</button>
+          </div>
+          <p>Short description of the details of this group. This group. gonna be a good group... <a href="">more information</a>
+          </p>
+          <img src="sample.jpg" />
+          </div>
+          <div class ="info">
+          <h2>Super Super Long Title: All of the Title that could be</h2>
+          <p class="dateTime">Tuesday &middot; 5:30 - 6:30 PM <br> August 12 - September 30 <br> Cache Makerspace </p>
+          <div class="tags">  &middot; Mechanical &middot; Design </div>
+          </div>
+          </div>
 
 
 
