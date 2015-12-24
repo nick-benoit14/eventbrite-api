@@ -49,7 +49,7 @@ $block-width:300px;
     display:inline-block; text-align:center; height:$block-height;
     width:$block-width; margin:0.5%; background-color:$primary-color;
     position:relative; color:$font-color;
-    box-shadow: 4px 4px 2px gray;
+    box-shadow: 4px 4px 2px gray; overflow:hidden;
     .cachemakers-image-box img{visibility:visible; opacity:1;}
 
     &:hover{

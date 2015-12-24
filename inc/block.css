@@ -17,7 +17,8 @@
   background-color: #DDDDDD;
   position: relative;
   color: #222222;
-  box-shadow: 4px 4px 2px gray; }
+  box-shadow: 4px 4px 2px gray;
+  overflow: hidden; }
   .cachemakers-container .cachemakers-image-box img {
     visibility: visible;
     opacity: 1; }
