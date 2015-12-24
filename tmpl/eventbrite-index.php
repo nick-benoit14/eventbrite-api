@@ -19,7 +19,6 @@ get_header(); ?>
 
 			<h1> Current Groups </h1>
 			<h1> Test </h1>
-		<?php	echo eventbrite_format_time(); ?>
 
 			<?php
 				// Set up and call our Eventbrite query.
@@ -53,8 +52,9 @@ get_header(); ?>
 	          </div>
 	          <div class ="cachemakers-info">
 		          <h2><?php the_title(); ?></h2>
-		          <p class="dateTime">Tuesday &middot; 5:30 - 6:30 PM <br> August 12 - September 30 <br> Cache Makerspace </p>
-		        <!--  <div class="tags">&middot; Mechanical &middot; Design </div> -->
+		        <!--  <p class="dateTime">Tuesday &middot; 5:30 - 6:30 PM <br> August 12 - September 30 <br> Cache Makerspace </p>-->
+								<p class="dateTime"> eventbrite_event_time(); </p>
+						<!--  <div class="tags">&middot; Mechanical &middot; Design </div> -->
 	          </div>
           </div>
 
