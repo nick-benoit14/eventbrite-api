@@ -13,7 +13,7 @@ if ( ! function_exists( 'eventbrite_get_eventblock' ) ):
     $post_string .=				"<button>Sign Up</button>";
     $post_string .=			"</div>";
     $post_string .=			"<p>Short description of the details of this group. This group. gonna be a good group... <a href=''>more information</a> </p>";
-    $post_string .=			"<img src='wp-includes/images/makers/sample.jpg' />";
+    $post_string .=			"<img src='wp-includes/images/Makers/sample.jpg' />";
     $post_string .=		"</div>";
     $post_string .=		"<div class ='info'>";
     $post_string .=			"<h2>Super Super Long Title: All of the Title that could be</h2>";
