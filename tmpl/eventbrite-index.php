@@ -1,10 +1,24 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
+<style>
+  @font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    src: local("Raleway"), url(https://fonts.gstatic.com/s/raleway/v9/0dTEPzkLWceF7z0koJaX1A.woff2) format("woff2"); }
+
+  .cachemakers-block, .container, .image-box, .info {
+    font-family: 'Raleway', sans-serif;
+    font-size: 100%;
+    line-height: 130%; }
+
+</style>
 
 <?php
 /**
  * Template Name: Eventbrite Events
  */
+
 
 
 get_header(); ?>
@@ -50,7 +64,7 @@ get_header(); ?>
           <div class ="info">
           <h2>Super Super Long Title: All of the Title that could be</h2>
           <p class="dateTime">Tuesday &middot; 5:30 - 6:30 PM <br> August 12 - September 30 <br> Cache Makerspace </p>
-          <div class="tags">  &middot; Mechanical &middot; Design </div>
+          <div class="tags">&middot; Mechanical &middot; Design </div>
           </div>
           </div>
 
