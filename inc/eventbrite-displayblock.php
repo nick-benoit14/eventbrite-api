@@ -55,7 +55,9 @@ if( ! function_exists('eventbrite_format_time') ):
 
     $event_time = sprintf( //Day of week * Time - Time * Start Date - End Date
     '%s &middot; %s - %s &middot; %s - %s',
-    esc_html( mysql2date( 'w', $start ) )
+	esc_html( mysql2date( 'l', eventbrite_event_start()->local ) ),
+	null,
+	 null, null, null
   );
 
     return $event_time;
