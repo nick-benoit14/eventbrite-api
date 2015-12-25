@@ -9,14 +9,8 @@
 
 
 get_header(); ?>
-	<div id="primary" <?php generate_content_class();?>>
-		<main id="main" class="site-main" role="main">
 
-
-                        <div  style="padding:30px" class="slider">
-  			  <div><img width="800" height="400" src="http://45.55.18.170/wp-content/uploads/2015/11/solder.jpg"></div>
-			</div>
-
+		<main id="main">
 			<h1> Current Groups </h1>
 
 			<?php
@@ -96,6 +90,5 @@ get_header(); ?>
 
 			</div>
 		</main><!-- #main -->
-	</div><!-- #primary -->
 	<?php get_sidebar(); ?>
 	<?php get_footer(); ?>
