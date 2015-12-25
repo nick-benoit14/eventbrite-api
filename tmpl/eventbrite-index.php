@@ -1,6 +1,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <style>
 	.cachemakers-header{padding:3%; text-align:center;}
+	.cachemakers-box{ width:auto; margin-left:auto; margin-right:auto; }
+	#main{width:100%;}
 </style>
 
 <?php
@@ -14,7 +16,7 @@ get_header(); ?>
 
 		<main id="main">
 			<h1 class="cachemakers-header"> Sign Up for a Group </h1>
-
+			<div class="cachemakers-box">
 			<?php
 				// Set up and call our Eventbrite query.
 				$events = new Eventbrite_Query( apply_filters( 'eventbrite_query_args', array(
@@ -66,7 +68,7 @@ get_header(); ?>
 				// Return $post to its rightful owner.
 				wp_reset_postdata();
 			?>
-
+			</div>
 			<h1 class="cachemakers-header">Location</h1>
 			<div>
 				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1489.1541753032047!2d-111.83529
