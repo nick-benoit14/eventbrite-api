@@ -6,7 +6,9 @@
  * Template Name: Eventbrite Events
  */
 
-
+<style>
+	h1{padding:3%; text-align:center;}
+</style>
 
 get_header(); ?>
 
