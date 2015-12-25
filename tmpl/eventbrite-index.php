@@ -11,7 +11,7 @@
 get_header(); ?>
 
 		<main id="main">
-			<h1> Current Groups </h1>
+			<h1> Sign Up for a Group </h1>
 
 			<?php
 				// Set up and call our Eventbrite query.
