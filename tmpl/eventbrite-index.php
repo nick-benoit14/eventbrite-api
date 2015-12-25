@@ -1,6 +1,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <style>
-	cachemakers-header{padding:3%; text-align:center;}
+	.cachemakers-header{padding:3%; text-align:center;}
 </style>
 
 <?php
