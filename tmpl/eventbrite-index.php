@@ -1,14 +1,14 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
+<style>
+	h1{padding:3%; text-align:center;}
+</style>
 
 <?php
 /**
  * Template Name: Eventbrite Events
  */
 
-<style>
-	h1{padding:3%; text-align:center;}
-</style>
+
 
 get_header(); ?>
 
