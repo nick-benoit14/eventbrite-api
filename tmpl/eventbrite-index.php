@@ -2,7 +2,7 @@
 <style>
 	.cachemakers-header{padding:3%; text-align:center;}
 	.cachemakers-box{ max-width:950px; margin-left:auto; margin-right:auto; }
-	#main{width:100%;}
+	#main{width:100%; padding-left:10%; padding-right:10%;}
 </style>
 
 <?php
@@ -10,12 +10,13 @@
  * Template Name: Eventbrite Events
  */
 
-
-
 get_header(); ?>
 
 		<main id="main">
 			<h1 class="cachemakers-header"> Sign Up for a Group </h1>
+			<p>Cache Maker's hosts a multitude volunteer led youth groups focused on Science, Technology, Engineering, and Math.
+				 Joining Cache Maker's 4-H club and signing up for a group is a great way to either start learning interesting things,
+			 	  and meet likeminded individuals</p>
 			<div class="cachemakers-box">
 			<?php
 				// Set up and call our Eventbrite query.
@@ -90,8 +91,6 @@ get_header(); ?>
 			  </p>
 
 			</div>
-
-
 			</div>
 		</main><!-- #main -->
 	<?php// get_sidebar(); ?>
