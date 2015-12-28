@@ -1,6 +1,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <style>
-	.cachemakers-header h1 p{padding:3%; text-align:center; max-width:66%;}
+	.cachemakers-header {padding:3%; text-align:center; max-width:66%;}
+	.cachemakers-header h1 p{ text-align:center;}
+
 	.cachemakers-box{ max-width:950px; margin-left:auto; margin-right:auto; }
 	#main{width:100%; padding-left:10%; padding-right:10%;}
 </style>
