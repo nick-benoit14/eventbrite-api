@@ -75,8 +75,8 @@ get_header(); ?>
 			?>
 			</div>
 
-			<div class="cachemakers-header" style="overflow:auto;"><h1>Things We've Made</h1></div>
-			<div>
+			<div class="cachemakers-header"><h1>Things We've Made</h1></div>
+			<div  style="overflow:auto;">
 				<iframe style="float:left;" width="560" height="315" src="https://www.youtube.com/embed/MxaKxS5POmY" frameborder="0" allowfullscreen></iframe>
 				<iframe style="float:right;" width="560" height="315" src="https://www.youtube.com/embed/CYzd85A-oCE" frameborder="0" allowfullscreen></iframe>
 			</div>
