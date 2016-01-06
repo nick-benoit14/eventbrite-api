@@ -17,7 +17,7 @@ get_header(); ?>
 		<main id="main">
 			<div class="cachemakers-header">
 			<h1> Sign Up for a Group </h1>
-			<p>Cache Maker's hosts a multitude volunteer led youth groups focused on Science, Technology, Engineering, and Math.
+			<p>Cache Makers hosts a multitude volunteer led youth groups focused on Science, Technology, Engineering, and Math.
 				 Joining Cache Maker's 4-H club and signing up for a group is a great way to start learning interesting things, continue
 				 learning about something you are already interested in, or meet likeminded individuals</p>
 			</div>
