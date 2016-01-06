@@ -81,10 +81,7 @@ get_header(); ?>
 				<iframe style="float:right;" width="560" height="315" src="https://www.youtube.com/embed/CYzd85A-oCE" frameborder="0" allowfullscreen></iframe>
 			</div>
 			<div style="margin:5%;">
-				<style type = "text/css" scoped>
-					iframe { display:block; margin:auto; } 
-				</style>
-				<a data-flickr-embed="true"  href="https://www.flickr.com/photos/114910479@N08/albums/72157661959120016" title="Website Slides"><img src="https://farm1.staticflickr.com/697/20499472514_61c1370293_b.jpg" width="1024" height="768" alt="Website Slides"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+				<a data-flickr-embed="true"  href="https://www.flickr.com/photos/114910479@N08/albums/72157661959120016" title="Website Slides"><img src="https://farm1.staticflickr.com/697/20499472514_61c1370293_b.jpg" style="display:block; margin-auto;" width="1024" height="768" alt="Website Slides"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 			</div>
 			<div class="cachemakers-header"><h1>Location</h1></div>
 			<div>
