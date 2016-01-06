@@ -5,7 +5,7 @@
 
 	.cachemakers-box{ max-width:950px; margin-left:auto; margin-right:auto; }
 	#main{width:100%; padding-left:10%; padding-right:10%;}
-	iframe{display:block; margin:auto;}
+	iframe{ display:block; margin:auto !important; }
 </style>
 
 <?php
