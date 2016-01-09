@@ -14,23 +14,20 @@ if ( ! function_exists( 'eventbrite_get_eventblock' ) ):
 
     $post_string = "";
 
-
-    $post_string .= "<div class='container'>";
-    $post_string .=		"<div class='image-box'>";
-    $post_string .=			"<div class='signup-box'>";
-    $post_string .=				"<h4>Leader: Joel Duffin</h4>";
-    $post_string .=				"<button>Sign Up</button>";
-    $post_string .=			"</div>";
-    $post_string .=			"<p>Short description of the details of this group. This group. gonna be a good group... <a href=''>more information</a> </p>";
-    $post_string .=			"<img src='wp-includes/images/Makers/sample.jpg' />";
-    $post_string .=		"</div>";
-    $post_string .=		"<div class ='info'>";
-    $post_string .=			"<h2>Super Super Long Title: All of the Title that could be</h2>";
-    $post_string .=			"<p class='dateTime'>Tuesday &middot; 5:30 - 6:30 PM <br> August 12 - September 30 <br> Cache Makerspace </p>";
-    $post_string .=			"<div class='tags'>  &middot; Mechanical &middot; Design </div>";
-    $post_string .=		"</div>";
-    $post_string .= "</div>";
-
+    $post_string =  "<div class='cachemakers-container'>
+                      <div class='cachemakers-image-box'>
+                        <div class='cachemakers-signup-box'>
+                          <!-- <h4>Leader: LeaderName</h4> -->
+                          <a href='" .  eventbrite_event_eb_url() . "'><button>Sign Up</button></a>
+                        </div>
+                        <p>" . eventbrite_get_description() . "</p>
+                        " . get_the_post_thumbnail() . "
+                      </div>
+                      <div class ='cachemakers-info'>
+                        <h2>" . get_the_title() . " . </h2>
+                          <p class='dateTime'> " . eventbrite_format_time() . " </p>
+                      </div>
+                    </div>";
        return $post_string;
   }
 endif;
