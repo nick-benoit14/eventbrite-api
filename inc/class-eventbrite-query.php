@@ -162,6 +162,7 @@ class Eventbrite_Query extends WP_Query {
 				$params['user.id'] = Eventbrite_API::$instance->eventbrite_external_id;
 			}
 		}
+		$params['start_date.range_start' =  "2016-01-1T13:00:00Z";
 
 		return $params;
 	}
