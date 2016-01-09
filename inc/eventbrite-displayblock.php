@@ -33,6 +33,47 @@ if ( ! function_exists( 'eventbrite_get_eventblock' ) ):
 endif;
 
 
+if ( ! function_exists( 'eventbrite_get_events' ) ):
+  function eventbrite_get_events(){
+    // Set up and call our Eventbrite query.
+    $events = new Eventbrite_Query( apply_filters( 'eventbrite_query_args', array(
+       'display_private' => false, // boolean
+       'nopaging' => true,        // boolean
+      // 'limit' => null,            // integer
+      // 'organizer_id' => null,     // integer
+      // 'p' => null,                // integer
+      // 'post__not_in' => null,     // array of integers
+      // 'venue_id' => null,         // integer
+      // 'category_id' => null,      // integer
+      // 'subcategory_id' => null,   // integer
+      // 'format_id' => null,        // integer
+    ) ) );
+
+   $blockstring = "";
+
+    if ( $events->have_posts() ) :
+      while ( $events->have_posts() ) : $events->the_post();
+        $blockstring .= eventbrite_get_eventblock();
+     endwhile;
+
+      // Previous/next post navigation.
+      eventbrite_paging_nav( $events );
+
+    else :
+      // If no content, include the "No posts found" template.
+      get_template_part( 'content', 'none' );
+
+    endif;
+
+    // Return $post to its rightful owner.
+    wp_reset_postdata();
+
+    return $blockstring;
+  }
+endif;
+
+
+
 
 if( ! function_exists('eventbrite_load_eventblock_style') ): //Give styles to wordpress. add action in eventbrite-api.php
   function eventbrite_load_eventblock_style(){

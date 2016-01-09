@@ -23,59 +23,7 @@ get_header(); ?>
 				 learning about something you are already interested in, or meet likeminded individuals</p>
 			</div>
 			<div class="cachemakers-box">
-			<?php
-				// Set up and call our Eventbrite query.
-				$events = new Eventbrite_Query( apply_filters( 'eventbrite_query_args', array(
-					 'display_private' => false, // boolean
-					 'nopaging' => true,        // boolean
-					// 'limit' => null,            // integer
-					// 'organizer_id' => null,     // integer
-					// 'p' => null,                // integer
-					// 'post__not_in' => null,     // array of integers
-					// 'venue_id' => null,         // integer
-					// 'category_id' => null,      // integer
-					// 'subcategory_id' => null,   // integer
-					// 'format_id' => null,        // integer
-				) ) );
-
-
-
-				if ( $events->have_posts() ) :
-					while ( $events->have_posts() ) : $events->the_post(); ?>
-
-					<?php echo eventbrite_get_eventblock(); ?>
-<!--
-          <div class="cachemakers-container">
-	          <div class="cachemakers-image-box">
-		          <div class="cachemakers-signup-box">
-
-		            <a href="<?php //echo eventbrite_event_eb_url(); ?>"><button>Sign Up</button></a>
-		          </div>
-							<p><?php// echo eventbrite_get_description(); ?></p>
-		          <?php //the_post_thumbnail(); ?>
-	          </div>
-	          <div class ="cachemakers-info">
-		          <h2><?php //the_title(); ?></h2>
-								<p class="dateTime"> <?php //echo  eventbrite_format_time(); ?> </p>
-	          </div>
-          </div>
--->
-
-
-					<?php endwhile;
-
-					// Previous/next post navigation.
-					eventbrite_paging_nav( $events );
-
-				else :
-					// If no content, include the "No posts found" template.
-					get_template_part( 'content', 'none' );
-
-				endif;
-
-				// Return $post to its rightful owner.
-				wp_reset_postdata();
-			?>
+			  eventbrite_get_events();
 			</div>
 
 			<div class="cachemakers-header"><h1>Things We've Made</h1></div>
