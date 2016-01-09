@@ -10,7 +10,7 @@ if ( ! function_exists( 'eventbrite_get_description' ) ):
 endif;
 
 if ( ! function_exists( 'eventbrite_get_eventblock' ) ):
-  function eventbrite_get_Eventblock(){
+  function eventbrite_get_eventblock(){
 
     $post_string = "";
 

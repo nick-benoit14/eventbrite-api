@@ -43,21 +43,23 @@ get_header(); ?>
 				if ( $events->have_posts() ) :
 					while ( $events->have_posts() ) : $events->the_post(); ?>
 
+					<?php echo eventbrite_get_eventblock(); ?>
+<!--
           <div class="cachemakers-container">
 	          <div class="cachemakers-image-box">
 		          <div class="cachemakers-signup-box">
-		            <!-- <h4>Leader: Joel Duffin</h4> -->
-		            <a href="<?php echo eventbrite_event_eb_url(); ?>"><button>Sign Up</button></a>
+
+		            <a href="<?php //echo eventbrite_event_eb_url(); ?>"><button>Sign Up</button></a>
 		          </div>
-							<p><?php echo eventbrite_get_description(); ?></p>
-		          <?php the_post_thumbnail(); ?>
+							<p><?php// echo eventbrite_get_description(); ?></p>
+		          <?php //the_post_thumbnail(); ?>
 	          </div>
 	          <div class ="cachemakers-info">
-		          <h2><?php the_title(); ?></h2>
-								<p class="dateTime"> <?php echo  eventbrite_format_time(); ?> </p>
+		          <h2><?php //the_title(); ?></h2>
+								<p class="dateTime"> <?php //echo  eventbrite_format_time(); ?> </p>
 	          </div>
           </div>
-
+-->
 
 
 					<?php endwhile;
