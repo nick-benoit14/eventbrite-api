@@ -24,7 +24,7 @@ if ( ! function_exists( 'eventbrite_get_eventblock' ) ):
                         " . get_the_post_thumbnail() . "
                       </div>
                       <div class ='cachemakers-info'>
-                      <h2><a href='". get_the_permalink() . "' >" . get_the_title() . "</a></h2>
+                    <a href='". get_the_permalink() . "' ><h2>" . get_the_title() . "</h2></a>
                           <p class='dateTime'> " . eventbrite_format_time() . " </p>
                       </div>
                     </div>";
