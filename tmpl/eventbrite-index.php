@@ -49,9 +49,7 @@ get_header(); ?>
 		    </p>
 
 			  <p>
-				North of the Providence Maceys, east of the South Walmart,
-	    	 west of the Mattress Outlet, and directly south of (the former) Don Aslett.
-		     Right by the bus stop.
+					North of the Providence Maceys, east of the South Walmart, west of the Mattress Outlet, and directly south of (the former) Don Aslett. Right by the bus stop.
 			  </p>
 
 			</div>
