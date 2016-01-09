@@ -23,7 +23,7 @@ get_header(); ?>
 				 learning about something you are already interested in, or meet likeminded individuals</p>
 			</div>
 			<div class="cachemakers-box">
-			  <?php echo eventbrite_get_events(); ?>
+			  <?php echo eventbrite_get_eventblocks(); ?>
 			</div>
 
 			<div class="cachemakers-header"><h1>Things We've Made</h1></div>
