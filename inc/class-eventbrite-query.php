@@ -381,7 +381,7 @@ class Eventbrite_Query extends WP_Query {
 		if ( eventbrite_is_event() ) {
 			$url = sprintf( '%1$s/%2$s/%3$s-%4$s/',
 				esc_url( home_url() ),                             // protocol://domain
-				sanitize_title( get_queried_object()->post_name ), // page-with-eventbrite-template
+				'events' /*sanitize_title( get_queried_object()->post_name )*/, // page-with-eventbrite-template
 				sanitize_title( get_post()->post_title ),               // event-title
 				absint( get_post()->ID )                                // event ID
 			);
