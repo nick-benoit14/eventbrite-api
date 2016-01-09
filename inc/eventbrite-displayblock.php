@@ -33,8 +33,8 @@ if ( ! function_exists( 'eventbrite_get_eventblock' ) ):
 endif;
 
 
-if ( ! function_exists( 'eventbrite_get_eventblocks' ) ):
-  function eventbrite_get_eventblocks(){
+if ( ! function_exists( 'eventbrite_get_events' ) ):
+  function eventbrite_get_events(){
     // Set up and call our Eventbrite query.
     $events = new Eventbrite_Query( apply_filters( 'eventbrite_query_args', array(
        'display_private' => false, // boolean
