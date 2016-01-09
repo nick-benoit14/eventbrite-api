@@ -1,4 +1,8 @@
-
+<?php
+/**
+ * Template Name: Eventbrite Events
+ */
+?>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <style>
@@ -10,13 +14,7 @@
 	iframe{ display:block; margin:auto !important; padding:2%; }
 </style>
 
-
-<?php
-/**
- * Template Name: Eventbrite Events
- */
-
-get_header(); ?>
+<?php get_header(); ?>
 
 		<main id="main">
 			<div class="cachemakers-header">
