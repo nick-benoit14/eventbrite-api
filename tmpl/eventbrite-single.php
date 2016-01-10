@@ -1,9 +1,15 @@
 <?php
 /**
  * The Template for displaying all single Eventbrite events.
- */
+ */ ?>
 
-get_header(); ?>
+ <style>
+ 		article{text-align:center; margin-left:10%; margin-right:10%; margin-top:5%; margin-bottom:5%;}
+		.entry-content{margin-left:10%; margin-right:10%;}
+
+ </style>
+
+<?php hget_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -21,7 +27,7 @@ get_header(); ?>
 								<h1 class="entry-title"><?php the_title(); ?></h1>
 
 								<div class="entry-meta">
-									<?php eventbrite_event_meta(); ?>
+									<?php eventbrite_format_time(); //eventbrite_event_meta(); ?>
 								</div><!-- .entry-meta -->
 							</header><!-- .entry-header -->
 
