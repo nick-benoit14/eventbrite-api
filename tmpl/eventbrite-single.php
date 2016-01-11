@@ -6,7 +6,8 @@
  <style>
  		article{text-align:center; margin-left:10%; margin-right:10%; margin-top:5%; margin-bottom:5%;}
 		.entry-content{margin-left:10%; margin-right:10%;}
-		.entry-header{padding-bottom:2%;}
+		.entry-header{margin-bottom:2%;}
+		.entry-meta{margin-bottom:2%;}
  </style>
 
 <?php get_header(); ?>
@@ -56,5 +57,5 @@
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+<?php// get_sidebar(); ?>
 <?php get_footer(); ?>
