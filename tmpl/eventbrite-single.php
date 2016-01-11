@@ -6,7 +6,7 @@
  <style>
  		article{text-align:center; margin-left:10%; margin-right:10%; margin-top:5%; margin-bottom:5%;}
 		.entry-content{margin-left:10%; margin-right:10%;}
-
+		.entry-header{padding-bottom:2%;}
  </style>
 
 <?php get_header(); ?>
