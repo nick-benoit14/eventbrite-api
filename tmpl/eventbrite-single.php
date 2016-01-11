@@ -27,7 +27,7 @@
 								<?php the_post_thumbnail(); ?>
 
 								<div class="entry-meta">
-									<?php eventbrite_format_time(); //eventbrite_event_meta(); ?>
+									<?php echo eventbrite_format_time(); //eventbrite_event_meta(); ?>
 								</div><!-- .entry-meta -->
 							</header><!-- .entry-header -->
 
