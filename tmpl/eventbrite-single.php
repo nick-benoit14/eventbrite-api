@@ -32,7 +32,7 @@
 								</div><!-- .entry-meta -->
 							</header><!-- .entry-header -->
 
-							<div class="entry-content post entry">
+							<div class="entry-content">
 								<p>
                   <?php echo get_the_content(); ?>
 								</p>
