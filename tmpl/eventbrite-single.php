@@ -34,7 +34,9 @@
 
 							<div class="entry-content post entry">
 								<p>
-                  <?php echo get_the_content(); ?>							
+                  <?php $organizer_id = get_query_var( 'organizer_id' ); ?>
+
+                  <?php echo get_the_content(); ?>
 								</p>
 
 								<?php eventbrite_ticket_form_widget(); ?>
