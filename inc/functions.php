@@ -472,10 +472,10 @@ function eventbrite_has_active_connection() {
 
 
 function eventbrite_strip_style($text){
-	
+
 	$text = strip_tags($text);
         $text = htmlentities($text, null, 'utf-8');
-	$text = str_replace("&nbsp;", "\n\n", $text);
+	$text = str_replace("&nbsp;", "<br><br>", $text);
         $text = wpautop($text);
  	return $text;
 }

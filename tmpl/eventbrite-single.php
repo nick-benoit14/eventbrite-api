@@ -34,7 +34,7 @@
 
 							<div class="entry-content">
 								<p>
-                  <?php echo get_the_content(); ?>
+                  <?php echo eventbrite_strip_style( get_the_content() ); ?>
 								</p>
 
 								<?php eventbrite_ticket_form_widget(); ?>
