@@ -469,3 +469,10 @@ endif;
 function eventbrite_has_active_connection() {
 	return ( Eventbrite_Requirements::has_active_connection() );
 }
+
+
+function eventbrite_strip_style($text){
+	$betterText = preg_replace('</p>', '\n\n', $text);
+	$betterText = strip_tags($betterText);
+	return $betterText;
+}
