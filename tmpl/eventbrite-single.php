@@ -22,9 +22,9 @@
 
 						<article id="event-<?php the_ID(); ?>" <?php post_class(); ?>>
 							<header class="entry-header">
-								<?php the_post_thumbnail(); ?>
 
 								<h1 class="entry-title"><?php the_title(); ?></h1>
+								<?php the_post_thumbnail(); ?>
 
 								<div class="entry-meta">
 									<?php eventbrite_format_time(); //eventbrite_event_meta(); ?>
