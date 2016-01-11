@@ -7,7 +7,7 @@
  		article{text-align:center; margin-left:10%; margin-right:10%; margin-top:5%; margin-bottom:5%;}
 		.entry-content{margin-left:10%; margin-right:10%;}
 		.entry-header{margin-bottom:2%;}
-		.entry-meta{margin-bottom:2%;}
+		.entry-meta{margin-top:2%;}
  </style>
 
 <?php get_header(); ?>
@@ -32,7 +32,7 @@
 								</div><!-- .entry-meta -->
 							</header><!-- .entry-header -->
 
-							<div class="entry-content">
+							<div class="entry-content post entry">
 								<?php the_content(); ?>
 
 								<?php eventbrite_ticket_form_widget(); ?>
