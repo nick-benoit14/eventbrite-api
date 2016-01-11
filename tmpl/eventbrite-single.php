@@ -34,8 +34,6 @@
 
 							<div class="entry-content post entry">
 								<p>
-                  <?php $organizer_id = get_query_var( 'organizer_id' ); ?>
-
                   <?php echo get_the_content(); ?>
 								</p>
 
