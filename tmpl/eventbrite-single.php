@@ -33,7 +33,7 @@
 							</header><!-- .entry-header -->
 
 							<div class="entry-content post entry">
-								<?php the_content(); ?>
+								<p><?php the_content(); ?></p>
 
 								<?php eventbrite_ticket_form_widget(); ?>
 							</div><!-- .entry-content -->
