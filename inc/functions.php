@@ -406,7 +406,7 @@ function eventbrite_ticket_form_widget() {
 	), '//eventbrite.com/tickets-external' );
 
 	// Assemble our ticket info HTML.
-	$ticket_html = sprintf( '<div class="eventbrite-widget"><iframe src="%1$s" height="%2$s" width="100%%" frameborder="0" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe></div>',
+	$ticket_html = sprintf( '<div class="eventbrite-widget"><iframe src="%1$s" height="%2$s" width="100%%" frameborder="0" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="none" allowtransparency="true"></iframe></div>',
 		esc_url( $src ),
 		esc_attr( eventbrite_get_ticket_form_widget_height() )
 	);
@@ -454,6 +454,8 @@ function eventbrite_get_ticket_form_widget_height() {
 	if ( ! isset( $sales_open ) ) {
 		$height -= 74;
 	}
+
+	$height += 200;
 
 	return (int) apply_filters( 'eventbrite_ticket_form_widget_height', $height );
 }
