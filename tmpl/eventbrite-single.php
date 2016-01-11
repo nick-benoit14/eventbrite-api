@@ -32,7 +32,7 @@
 								</div><!-- .entry-meta -->
 							</header><!-- .entry-header -->
 
-							<div class="entry-content">
+							<div class="entry-content post entry">
 								<p>
                   <?php echo eventbrite_strip_style( get_the_content() ); ?>
 								</p>
