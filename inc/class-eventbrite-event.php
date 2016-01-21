@@ -14,7 +14,12 @@ class Eventbrite_Event {
 	 * @var int
 	 */
 	public $ID; // id
-
+	/**
+	 * The event's title.
+	 *
+	 * @var string
+	 */
+	public $privacy_setting;
 	/**
 	 * The event's title.
 	 *

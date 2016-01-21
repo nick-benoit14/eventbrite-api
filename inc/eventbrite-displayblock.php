@@ -37,7 +37,7 @@ if ( ! function_exists( 'eventbrite_get_eventblocks' ) ):
   function eventbrite_get_eventblocks(){
     // Set up and call our Eventbrite query.
     $events = new Eventbrite_Query( apply_filters( 'eventbrite_query_args', array(
-       'display_private' => false, // boolean
+       'display_private' => true, // boolean
        'nopaging' => true,        // boolean
       // 'limit' => null,            // integer
       // 'organizer_id' => null,     // integer
