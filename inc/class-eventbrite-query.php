@@ -154,6 +154,7 @@ class Eventbrite_Query extends WP_Query {
 		if ( ! isset( $this->query_vars['display_private'] ) || true !== $this->query_vars['display_private'] ) {
 			// Set sorting.
 			$params['sort_by'] = 'date';
+			$params['start_date.range_start'] =  "2016-01-1T00:00:00Z";
 
 			// Set the user ID if we don't have a specified organizer.
 			if ( ! empty( $this->query_vars['organizer_id'] ) ) {
@@ -162,7 +163,6 @@ class Eventbrite_Query extends WP_Query {
 				$params['user.id'] = Eventbrite_API::$instance->eventbrite_external_id;
 			}
 		}
-		// $params['start_date.range_start'] =  "2016-01-1T00:00:00Z";
 
 		return $params;
 	}
@@ -262,7 +262,7 @@ class Eventbrite_Query extends WP_Query {
 
 		// Filter out private groups
 			$this->api_results->events = array_filter( $this->api_results->events, array( $this, 'filter_by_privacy_setting' ) );
-		
+
 
 
 		// Filter out specified IDs: 'post__not_in'
