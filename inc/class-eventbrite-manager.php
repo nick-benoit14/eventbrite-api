@@ -229,7 +229,7 @@ class Eventbrite_Manager {
 	 * @return mixed Transient if found, false if not.
 	 */
 	protected function get_cache( $endpoint, $params ) {
-		return get_transient( $this->get_transient_name( $endpoint, $params ) ); 
+		return get_transient( $this->get_transient_name( $endpoint, $params ) );
 	}
 
 	/**
@@ -368,7 +368,7 @@ class Eventbrite_Manager {
 		$event['category']      = ( isset( $api_event->category ) )          ? $api_event->category          : '';
 		$event['subcategory']   = ( isset( $api_event->subcategory ) )       ? $api_event->subcategory       : '';
 		$event['format']        = ( isset( $api_event->format ) )            ? $api_event->format            : '';
-
+		$event['privacy_setting'] = ( isset( $api_event->privacy_setting ) ) ? $api_event->privacy_setting   : '';
 		return (object) $event;
 	}
 
