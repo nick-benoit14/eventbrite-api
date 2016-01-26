@@ -261,9 +261,8 @@ class Eventbrite_Query extends WP_Query {
 		}
 
 		// Filter out private groups
-		if ( isset( $this->query_vars['privacy_setting'] ) && is_array( $this->query_vars['privacy_setting'] ) ) {
 			$this->api_results->events = array_filter( $this->api_results->events, array( $this, 'filter_by_privacy_setting' ) );
-		}
+		
 
 
 		// Filter out specified IDs: 'post__not_in'
@@ -323,9 +322,11 @@ class Eventbrite_Query extends WP_Query {
 	 * @param  object $event A single event from the API call results.
 	 * @return bool True with no ID match, false if the ID is in the array of events to be removed.
 	 */
-	protected function filter_by_privacy_settingn( $event ) {
+	protected function filter_by_privacy_setting( $event ) {
 		// Allow events not found in the array.
-		return  in_array( $event->privacy_setting, $this->query_vars['privacy_setting']);
+		//return  in_array( $event->privacy_setting, $this->query_vars['privacy_setting']);
+		return ($event->privacy_setting == "unlocked");
+		//return true; // in_array( $event->privacy_setting, $this->query_vars['privacy_setting']);
 	}
 
 	/**
