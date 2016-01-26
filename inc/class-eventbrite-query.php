@@ -162,7 +162,7 @@ class Eventbrite_Query extends WP_Query {
 				$params['user.id'] = Eventbrite_API::$instance->eventbrite_external_id;
 			}
 		}
-		$params['start_date.range_start'] =  "2016-01-1T00:00:00Z";
+		// $params['start_date.range_start'] =  "2016-01-1T00:00:00Z";
 
 		return $params;
 	}
@@ -260,6 +260,12 @@ class Eventbrite_Query extends WP_Query {
 			return false;
 		}
 
+		// Filter out private groups
+		if ( isset( $this->query_vars['privacy_setting'] ) && is_array( $this->query_vars['privacy_setting'] ) ) {
+			$this->api_results->events = array_filter( $this->api_results->events, array( $this, 'filter_by_privacy_setting' ) );
+		}
+
+
 		// Filter out specified IDs: 'post__not_in'
 		if ( isset( $this->query_vars['post__not_in'] ) && is_array( $this->query_vars['post__not_in'] ) ) {
 			$this->api_results->events = array_filter( $this->api_results->events, array( $this, 'filter_by_post_not_in' ) );
@@ -307,6 +313,19 @@ class Eventbrite_Query extends WP_Query {
 	protected function filter_by_post_not_in( $event ) {
 		// Allow events not found in the array.
 		return ! in_array( $event->ID, $this->query_vars['post__not_in'] );
+	}
+
+	/**
+	 * Determine if event is private_setting
+	 *
+	 * @access protected
+	 *
+	 * @param  object $event A single event from the API call results.
+	 * @return bool True with no ID match, false if the ID is in the array of events to be removed.
+	 */
+	protected function filter_by_privacy_settingn( $event ) {
+		// Allow events not found in the array.
+		return  in_array( $event->privacy_setting, $this->query_vars['privacy_setting']);
 	}
 
 	/**
