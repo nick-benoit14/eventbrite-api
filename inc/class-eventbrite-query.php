@@ -60,6 +60,13 @@ class Eventbrite_Query extends WP_Query {
 			$query['organizer_id'] = (int) $organizer_id;
 		}
 
+		// Filter by organizer ID if an "author archive" (organizer events) was requested.
+		$privacy_setting= get_query_var( 'privacy_setting' );
+		if ( empty( $query['privacy_setting'] ) && ! empty( $privacy_setting ) ) {
+			$query['privacy_setting'] = $privacy_setting;
+		}
+
+
 		// Filter by venue ID if a venue archive (all events at a certain venue) was requested.
 		$venue_id = get_query_var( 'venue_id' );
 		if ( empty( $query['venue_id'] ) && ! empty( $venue_id ) ) {
@@ -260,9 +267,10 @@ class Eventbrite_Query extends WP_Query {
 			return false;
 		}
 
+		if ( isset( $this->query_vars['privacy_setting'] ) && is_array( $this->query_vars['privacy_setting'] ) ) {
 		// Filter out private groups
 			$this->api_results->events = array_filter( $this->api_results->events, array( $this, 'filter_by_privacy_setting' ) );
-
+		}
 
 
 		// Filter out specified IDs: 'post__not_in'
