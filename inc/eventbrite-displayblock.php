@@ -104,6 +104,7 @@ if ( ! function_exists( 'eventbrite_get_eventblocks' ) ):
        'display_private' => true, // boolean
        'nopaging' => true,        // boolean
        'privacy_setting' => 'unlocked',
+       'show_future'=>false,
       // 'limit' => null,            // integer
       // 'organizer_id' => null,     // integer
       // 'p' => null,                // integer

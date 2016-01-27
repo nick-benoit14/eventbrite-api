@@ -267,7 +267,9 @@ class Eventbrite_Query extends WP_Query {
 			return false;
 		}
 
+		if ( isset( $this->query_vars['show_future'] ) &&  $this->query_vars['show_future'] == false ) {
 		$this->api_results->events = array_filter( $this->api_results->events, array( $this, 'filter_by_start_date' ) );
+		}
 
 		// Filter out private groups
 		if ( isset( $this->query_vars['privacy_setting'] ) && is_string( $this->query_vars['privacy_setting'] ) ) {
@@ -325,11 +327,9 @@ class Eventbrite_Query extends WP_Query {
 	}
 
 	protected function filter_by_start_date( $event ){
-
 	$start_time = strtotime($event->start->utc);
 	$now = time();
-
-	return $start_time < $now;	
+	return $start_time < $now;
 	}
 
 	/**
