@@ -33,7 +33,7 @@
 	 * @return array Query vars including our Eventbrite-specific vars.
 	 */
 	public function add_query_vars( $query_vars ) {
-		$query_vars = array_merge( $query_vars, array( 'eventbrite_id', 'organizer_id', 'venue_id' ) );
+		$query_vars = array_merge( $query_vars, array( 'eventbrite_id', 'organizer_id', 'venue_id', 'privacy_setting' ) );
 
 		return $query_vars;
 	}
