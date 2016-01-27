@@ -34,7 +34,7 @@ endif;
 
 
 if ( ! function_exists( 'eventbrite_get_open_eventblock' ) ):
-  function eventbrite_get_eventblock(){
+  function eventbrite_get_open_eventblock(){
 
     $post_string = "";
 
