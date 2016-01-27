@@ -325,8 +325,11 @@ class Eventbrite_Query extends WP_Query {
 	}
 
 	protected function filter_by_start_date( $event ){
-		return  false;
 
+	$start_time = strtotime($event->start->utc);
+	$now = time();
+
+	return $start_time < $now;	
 	}
 
 	/**
