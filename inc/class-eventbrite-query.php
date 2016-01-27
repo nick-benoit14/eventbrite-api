@@ -62,9 +62,9 @@ class Eventbrite_Query extends WP_Query {
 
 		// Filter by organizer ID if an "author archive" (organizer events) was requested.
 		$privacy_setting= get_query_var( 'privacy_setting' );
-		if ( empty( $query['privacy_setting'] ) && ! empty( $privacy_setting ) ) {
-			$query['privacy_setting'] = $privacy_setting;
-		}
+	//	if ( empty( $query['privacy_setting'] ) && ! empty( $privacy_setting ) ) {
+			$query['privacy_setting'] = 'unlocked'; //$privacy_setting;
+	//	}
 
 
 		// Filter by venue ID if a venue archive (all events at a certain venue) was requested.
@@ -267,7 +267,7 @@ class Eventbrite_Query extends WP_Query {
 			return false;
 		}
 
-		if ( isset( $this->query_vars['privacy_setting'] ) && is_array( $this->query_vars['privacy_setting'] ) ) {
+		if ( isset( $this->query_vars['privacy_setting'] ) && is_string( $this->query_vars['privacy_setting'] ) ) {
 		// Filter out private groups
 			$this->api_results->events = array_filter( $this->api_results->events, array( $this, 'filter_by_privacy_setting' ) );
 		}
@@ -332,9 +332,7 @@ class Eventbrite_Query extends WP_Query {
 	 */
 	protected function filter_by_privacy_setting( $event ) {
 		// Allow events not found in the array.
-		//return  in_array( $event->privacy_setting, $this->query_vars['privacy_setting']);
-		return ($event->privacy_setting == "unlocked");
-		//return true; // in_array( $event->privacy_setting, $this->query_vars['privacy_setting']);
+		return  ( $event->privacy_setting ==  $this->query_vars['privacy_setting']);
 	}
 
 	/**
