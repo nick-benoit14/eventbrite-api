@@ -161,7 +161,7 @@ class Eventbrite_Query extends WP_Query {
 		if ( ! isset( $this->query_vars['display_private'] ) || true !== $this->query_vars['display_private'] ) {
 			// Set sorting.
 			$params['sort_by'] = 'date';
-			$params['start_date.range_start'] =  "2016-01-1T00:00:00Z";
+	//		$params['start_date.range_start'] =  "2016-01-1T00:00:00Z";
 
 			// Set the user ID if we don't have a specified organizer.
 			if ( ! empty( $this->query_vars['organizer_id'] ) ) {
