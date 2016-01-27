@@ -18,6 +18,30 @@ if ( ! function_exists( 'eventbrite_get_eventblock' ) ):
                       <div class='cachemakers-image-box'>
                         <div class='cachemakers-signup-box'>
                           <!-- <h4>Leader: LeaderName</h4> -->
+                          <a href='" .  eventbrite_event_eb_url() . "'><button>More Info</button></a>
+                        </div>
+                        <p>" . eventbrite_get_description() . "</p>
+                        " . get_the_post_thumbnail() . "
+                      </div>
+                      <div class ='cachemakers-info'>
+                      <h2><a href='". esc_url( get_permalink() ) . "' >" . get_the_title() . "</a></h2>
+                          <p class='dateTime'> " . eventbrite_format_time() . " </p>
+                      </div>
+                    </div>";
+       return $post_string;
+  }
+endif;
+
+
+if ( ! function_exists( 'eventbrite_get_open_eventblock' ) ):
+  function eventbrite_get_eventblock(){
+
+    $post_string = "";
+
+    $post_string =  "<div class='cachemakers-container'>
+                      <div class='cachemakers-image-box'>
+                        <div class='cachemakers-signup-box'>
+                          <!-- <h4>Leader: LeaderName</h4> -->
                           <a href='" .  eventbrite_event_eb_url() . "'><button>Sign Up</button></a>
                         </div>
                         <p>" . eventbrite_get_description() . "</p>
@@ -54,7 +78,7 @@ if ( ! function_exists( 'eventbrite_get_open_eventblocks' ) ):
 
     if ( $events->have_posts() ) :
       while ( $events->have_posts() ) : $events->the_post();
-        $blockstring .= eventbrite_get_eventblock();
+        $blockstring .= eventbrite_get_open_eventblock();
      endwhile;
 
       // Previous/next post navigation.
