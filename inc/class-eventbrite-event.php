@@ -15,11 +15,17 @@ class Eventbrite_Event {
 	 */
 	public $ID; // id
 	/**
-	 * The event's title.
+	 * The event's privacy_setting
 	 *
 	 * @var string
 	 */
 	public $privacy_setting;
+	/**
+	 * The event's invite_only status
+	 *
+	 * @var bool
+	 */
+	public $invite_only;
 	/**
 	 * The event's title.
 	 *

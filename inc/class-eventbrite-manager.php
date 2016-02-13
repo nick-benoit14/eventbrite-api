@@ -370,7 +370,6 @@ class Eventbrite_Manager {
 		$event['format']        = ( isset( $api_event->format ) )            ? $api_event->format            : '';
 		$event['privacy_setting'] = ( isset( $api_event->privacy_setting ) ) ? $api_event->privacy_setting   : '';
 		$event['invite_only'] = ( isset( $api_event->invite_only ) ) ? $api_event->invite_only  : '';
-		//TODO
 
 		return (object) $event;
 	}

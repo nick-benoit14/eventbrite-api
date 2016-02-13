@@ -342,8 +342,8 @@ class Eventbrite_Query extends WP_Query {
 	 */
 	protected function filter_by_privacy_setting( $event ) {
 		// Allow events not found in the array.
-		//TODO
-		if($this->query_vars['invite_only'] == true){return true;}
+		
+		if($event->invite_only == true){return false;} //look at invite_only because privacy_setting couldnt be changed to private on eventbrite side
 		return  ( $event->privacy_setting ==  $this->query_vars['privacy_setting']);
 	}
 
