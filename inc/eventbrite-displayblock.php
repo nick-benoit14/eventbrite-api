@@ -85,8 +85,12 @@ if ( ! function_exists( 'eventbrite_get_open_eventblocks' ) ):
       //eventbrite_paging_nav( $events );
 
     else :
-      // If no content, include the "No posts found" template.
-      get_template_part( 'content', 'none' );
+      // If no content, include the "No posts found" template
+      $blockstring .= "<h4>Group registration is not currently open</h4>";
+      $blockstring .= "<p>Check back soon!</p>";
+	
+      
+      //get_template_part( 'content', 'none' );
 
     endif;
 
