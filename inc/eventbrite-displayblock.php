@@ -12,8 +12,7 @@ endif;
 if ( ! function_exists( 'eventbrite_get_eventblock' ) ):
   function eventbrite_get_eventblock(){
 
-    // $post_string = "";
-
+    $post_string = "";
     $post_string = "<div class='cachemakers-container'>
           <div class='cachemakers-image-box'>
             <div class='cachemakers-signup-box'>
