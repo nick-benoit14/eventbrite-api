@@ -12,22 +12,37 @@ endif;
 if ( ! function_exists( 'eventbrite_get_eventblock' ) ):
   function eventbrite_get_eventblock(){
 
-    $post_string = "";
+    // $post_string = "";
 
-    $post_string =  "<div class='cachemakers-container'>
-                      <div class='cachemakers-image-box'>
-                        <div class='cachemakers-signup-box'>
-                          <!-- <h4>Leader: LeaderName</h4> -->
-                          <a href='" .  eventbrite_event_eb_url() . "'><button>More Info</button></a>
-                        </div>
-                        <p>" . eventbrite_get_description() . "</p>
-                        " . get_the_post_thumbnail() . "
-                      </div>
-                      <div class ='cachemakers-info'>
-                      <h2><a href='". esc_url( get_permalink() ) . "' >" . get_the_title() . "</a></h2>
-                          <p class='dateTime'> " . eventbrite_format_time() . " </p>
-                      </div>
-                    </div>";
+    $post_string = "<div class='cachemakers-container'>
+          <div class='cachemakers-image-box'>
+            <div class='cachemakers-signup-box'>
+              <!-- <h4>Leader: LeaderName</h4> -->
+            </div>
+            " . get_the_post_thumbnail() . "
+            <p>" . eventbrite_get_description() . "</p>
+          </div>
+          <div class ='cachemakers-info'>
+          <h2><a href='" . eventbrite_event_eb_url() . "' >Coding Club</a></h2>
+          <a href='" . esc_url(get_permalink()) . "'><button class="cachemakers-infoButton">More Info</button></a>
+              <p class='dateTime'>". eventbrite_get_dates() . "/p>
+          </div>
+      </div>";
+
+    // $post_string =  "<div class='cachemakers-container'>
+    //                   <div class='cachemakers-image-box'>
+    //                     <div class='cachemakers-signup-box'>
+    //                       <!-- <h4>Leader: LeaderName</h4> -->
+    //                       <a href='" .  eventbrite_event_eb_url() . "'><button>More Info</button></a>
+    //                     </div>
+    //                     <p>" . eventbrite_get_description() . "</p>
+    //                     " . get_the_post_thumbnail() . "
+    //                   </div>
+    //                   <div class ='cachemakers-info'>
+    //                   <h2><a href='". esc_url( get_permalink() ) . "' >" . get_the_title() . "</a></h2>
+    //                       <p class='dateTime'> " . eventbrite_format_time() . " </p>
+    //                   </div>
+    //                 </div>";
        return $post_string;
   }
 endif;
@@ -88,8 +103,8 @@ if ( ! function_exists( 'eventbrite_get_open_eventblocks' ) ):
       // If no content, include the "No posts found" template
       $blockstring .= "<h4>Group registration is not currently open</h4>";
       $blockstring .= "<p>Check back soon!</p>";
-	
-      
+
+
       //get_template_part( 'content', 'none' );
 
     endif;
@@ -171,4 +186,15 @@ if( ! function_exists('eventbrite_format_time') ):
   }
 endif;
 
+if(! function_exists('eventbrite_get_dates')):
+  function eventbrite_get_dates(){
+    $start = eventbrite_event_start()->local;
+    $end = eventbrite_event_end()->local;
+    $event_dates = sprintf('%s - %s',
+      esc_html( mysql2date( 'F j', $start ) ), //Start Date
+      esc_html( mysql2date( 'F j Y', $end ) )  //End Date
+    );
+    return $event_dates;
+  }
+endif;
 ?>
