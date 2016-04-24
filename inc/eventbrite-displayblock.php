@@ -164,6 +164,8 @@ if ( ! function_exists( 'eventbrite_open_registration_blocks' ) ):
        'display_private' => true, // boolean
        'nopaging' => true,        // boolean
        'privacy_setting'=>'unlocked',
+       'show_future' => true,
+       'show_current' => false,
       // 'limit' => null,            // integer
       // 'organizer_id' => null,     // integer
       // 'p' => null,                // integer

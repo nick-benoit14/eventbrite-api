@@ -60,11 +60,11 @@ class Eventbrite_Query extends WP_Query {
 			$query['organizer_id'] = (int) $organizer_id;
 		}
 
-		// Filter by organizer ID if an "author archive" (organizer events) was requested.
+		// Filter by privacy setting if set
 		$privacy_setting= get_query_var( 'privacy_setting' );
-	//	if ( empty( $query['privacy_setting'] ) && ! empty( $privacy_setting ) ) {
+		if ( empty( $query['privacy_setting'] ) && ! empty( $privacy_setting ) ) {
 			$query['privacy_setting'] = 'unlocked'; //$privacy_setting;
-	//	}
+		}
 
 
 		// Filter by venue ID if a venue archive (all events at a certain venue) was requested.
@@ -267,8 +267,14 @@ class Eventbrite_Query extends WP_Query {
 			return false;
 		}
 
+		// filter out future events
 		if ( isset( $this->query_vars['show_future'] ) &&  $this->query_vars['show_future'] == false ) {
-		$this->api_results->events = array_filter( $this->api_results->events, array( $this, 'filter_by_start_date' ) );
+			$this->api_results->events = array_filter( $this->api_results->events, array( $this, 'filter_by_start_date' ) );
+		}
+		
+		//filter out events that have started 
+		if ( isset( $this->query_vars['show_current'] ) &&  $this->query_vars['show_current'] == false ) {
+			$this->api_results->events = array_filter( $this->api_results->events, array( $this, 'filter_by_current_date' ) );
 		}
 
 		// Filter out private groups
@@ -325,11 +331,26 @@ class Eventbrite_Query extends WP_Query {
 		// Allow events not found in the array.
 		return ! in_array( $event->ID, $this->query_vars['post__not_in'] );
 	}
-
+	
+	/** 
+	 * Determine if event should be displayed based on show_future query parameter 
+	 *
+	*/
 	protected function filter_by_start_date( $event ){
-	$start_time = strtotime($event->start->utc);
-	$now = time();
-	return $start_time < $now;
+		$start_time = strtotime($event->start->utc);
+		$now = time();
+		return $start_time < $now;
+	}
+
+
+	/** 
+	 * Determine if event should be displayed based on show_current query parameter 
+	 *
+	*/
+	protected function filter_by_current_date( $event ){
+		$start_time = strtotime($event->start->utc);
+		$now = time();
+		return $start_time > $now;
 	}
 
 	/**
