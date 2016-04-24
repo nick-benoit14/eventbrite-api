@@ -22,9 +22,9 @@ if ( ! function_exists( 'eventbrite_get_eventblock' ) ):
             <p>" . eventbrite_get_description() . "</p>
           </div>
           <div class ='cachemakers-info'>
-          <h2><a href='" . eventbrite_event_eb_url() . "' >Coding Club</a></h2>
-          <a href='" . esc_url(get_permalink()) . "'><button class="cachemakers-infoButton">More Info</button></a>
-              <p class='dateTime'>". eventbrite_get_dates() . "/p>
+          <h2><a href='" . eventbrite_event_eb_url() . "' >". get_the_title() ."</a></h2>
+          <a href='" .  eventbrite_event_eb_url()  . "'><button class='cachemakers-infoButton'>More Info</button></a>
+              <p class='dateTime'>". eventbrite_get_dates() . "</p>
           </div>
       </div>";
 
@@ -92,7 +92,7 @@ if ( ! function_exists( 'eventbrite_get_open_eventblocks' ) ):
 
     if ( $events->have_posts() ) :
       while ( $events->have_posts() ) : $events->the_post();
-        $blockstring .= eventbrite_get_open_eventblock();
+        $blockstring .= eventbrite_get_eventblock();
      endwhile;
 
       // Previous/next post navigation.
@@ -147,6 +147,51 @@ if ( ! function_exists( 'eventbrite_get_eventblocks' ) ):
     else :
       // If no content, include the "No posts found" template.
       get_template_part( 'content', 'none' );
+
+    endif;
+
+    // Return $post to its rightful owner.
+    wp_reset_postdata();
+
+    return $blockstring;
+  }
+endif;
+
+if ( ! function_exists( 'eventbrite_open_registration_blocks' ) ):
+  function eventbrite_open_registration_blocks(){
+    // Set up and call our Eventbrite query.
+    $events = new Eventbrite_Query( apply_filters( 'eventbrite_query_args', array(
+       'display_private' => true, // boolean
+       'nopaging' => true,        // boolean
+       'privacy_setting'=>'unlocked',
+      // 'limit' => null,            // integer
+      // 'organizer_id' => null,     // integer
+      // 'p' => null,                // integer
+      // 'post__not_in' => null,     // array of integers
+      // 'venue_id' => null,         // integer
+      // 'category_id' => null,      // integer
+      // 'subcategory_id' => null,   // integer
+      // 'format_id' => null,        // integer
+
+    ) ) );
+
+   $blockstring = "";
+
+    if ( $events->have_posts() ) :
+      while ( $events->have_posts() ) : $events->the_post();
+        $blockstring .= eventbrite_get_eventblock();
+     endwhile;
+
+      // Previous/next post navigation.
+      //eventbrite_paging_nav( $events );
+
+    else :
+      // If no content, include the "No posts found" template
+      $blockstring .= "<h4>Group registration is not currently open</h4>";
+      $blockstring .= "<p>Check back soon!</p>";
+
+
+      //get_template_part( 'content', 'none' );
 
     endif;
 

@@ -3,6 +3,7 @@
   font-style: normal;
   font-weight: 400;
   src: local("Raleway"), url(https://fonts.gstatic.com/s/raleway/v9/0dTEPzkLWceF7z0koJaX1A.woff2) format("woff2"); }
+
 .cachemakers-block, .cachemakers-container, .cachemakers-image-box, .cachemakers-info {
   font-family: 'Raleway', sans-serif;
   font-size: 100%;
@@ -14,7 +15,7 @@
   height: 340px;
   width: 300px;
   margin: 0.5%;
-  background-color: #DDDDDD;
+  background-color: #dddddd;
   position: relative;
   color: #222222;
   box-shadow: 4px 4px 2px gray;
@@ -67,14 +68,15 @@
   top: 65px;
   left: 50%;
   margin-left: -58px;
-  width: 120px; }
+  width: 120px;
+  padding: 8px; }
   .cachemakers-infoButton:hover {
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     -ms-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
-    background-color: #ffffff;
-    color: #000000; }
+    background-color: white;
+    color: black; }
 
 .cachemakers-info {
   position: relative; }
@@ -89,7 +91,7 @@
   .cachemakers-info .dateTime {
     font-size: 130%;
     position: absolute;
-    bottom: 40px;
+    bottom: 20px;
     margin-left: auto;
     margin-right: auto;
     width: 100%; }
@@ -97,5 +99,3 @@
     font-size: 70%;
     text-align: left;
     margin: 10%; }
-
-/*# sourceMappingURL=block.css.map */
